@@ -1,0 +1,87 @@
+// Scott modification
+section#home {
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+}
+
+div#upcoming {
+  width: 25%;
+  float: left;
+  vertical-align: top;
+}
+
+div#summaries {
+  width: 70%;
+  margin-left: 30%;
+  vertical-align: top;
+}
+
+// Header text feature
+.call-out {
+  //@extend %padding-regular;
+  display: inline-block;
+  width: 100%;
+  background-color:$header-desc-background-color;
+  background-size: cover;
+  font-size: 1.2em;
+  text-align: center;
+  color: $header-desc-text-color;
+}
+.call-out p:last-child {
+  margin-bottom: 0;
+}
+
+// Post listing
+.upcoming {
+  font-size: .8em;
+  .meeting {
+    //@extend %padding-regular;
+    width: 100%;
+    //margin-bottom: 0;
+    //display: inline-block;
+    background-size: $feature-image-size;
+    border-bottom: 1px solid $border-color;
+    p a:hover {
+      @extend %link-hover;
+    }
+  }
+  .excerpt {
+    margin-top: 1em;
+    font-size: .8em;
+  }
+}
+
+// Post listing
+.posts {
+  .post-teaser {
+    //@extend %padding-regular;
+    width: 100%;
+    margin-bottom: 0;
+    display: inline-block;
+    background-size: $feature-image-size;
+    border-bottom: 1px solid $border-color;
+    p a:hover {
+      @extend %link-hover;
+    }
+  }
+  .excerpt {
+    margin-top: 1em;
+  }
+  .summary {
+    margin-top: 1em;
+    font-size: .8em;
+  }
+}
+
+// Pagination
+.pagination .button {
+  margin: 0 1.5em;
+  i {
+    vertical-align: middle;
+  }
+}
+.pagination {
+  padding: $padding-small $padding-large 0 $padding-large;
+  text-align: center;
+}
