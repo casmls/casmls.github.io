@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Reading List
-permalink: /readinglist/
+title: Papers
+permalink: /papers/
 ---
 
-This is a list of suggested papers to choose from. It is loosely organized by topic.
+This is a list of suggested papers to choose from, loosely organized by topic.
 
 ## Inference
 - Rezende, Danilo Jimenez, and Shakir Mohamed. "Variational inference with normalizing flows." _arXiv preprint arXiv:1505.05770_ (2015). [link](http://arxiv.org/pdf/1505.05770)
@@ -31,9 +31,7 @@ This is a list of suggested papers to choose from. It is loosely organized by to
 
 - Johnson, Matthew J., et al. "Composing graphical models with neural networks for structured representations and fast inference." _arXiv preprint arXiv:1603.06277_ (2016). [link](http://arxiv.org/pdf/1603.06277)
 
-- Gao, Yuanjun, et al. "Linear dynamical neural population models through nonlinear embeddings." _arXiv preprint arXiv:1605.08454_ (2016). [link](http://arxiv.org/pdf/1605.08454)
-
-- Duvenaud, David, Dougal Maclaurin, and Ryan P. Adams. "Early Stopping as Nonparametric Variational Inference." _Proceedings of the 19th International Conference on Artificial Intelligence and Statistics. 2016. [link](http://www.jmlr.org/proceedings/papers/v51/duvenaud16.pdf)
+- Duvenaud, David, Dougal Maclaurin, and Ryan P. Adams. "Early Stopping as Nonparametric Variational Inference." _AISTATS_ (2016). [link](http://www.jmlr.org/proceedings/papers/v51/duvenaud16.pdf)
 
 - Rudolph, Maja R., et al. "Exponential Family Embeddings." _arXiv preprint arXiv:1608.00778_ (2016). [link](http://arxiv.org/pdf/1608.00778)
 
@@ -102,6 +100,8 @@ This is a list of suggested papers to choose from. It is loosely organized by to
 - Gatys, Leon A., Alexander S. Ecker, and Matthias Bethge. "A neural algorithm of artistic style." _arXiv preprint arXiv:1508.06576_ (2015). [link](http://arxiv.org/pdf/1508.06576)
 
 ## State Space Models
+- Gao, Yuanjun, et al. "Linear dynamical neural population models through nonlinear embeddings." _arXiv preprint arXiv:1605.08454_ (2016). [link](http://arxiv.org/pdf/1605.08454)
+
 - Ross, Stéphane, Geoffrey J. Gordon, and Drew Bagnell. "A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning." _AISTATS_ (2011). [link](http://www.jmlr.org/proceedings/papers/v15/ross11a/ross11a.pdf)
 
 - Sun, Wen, et al. "Learning to filter with predictive state inference machines."_arXiv preprint arXiv:1512.08836_ (2015). [link](http://arxiv.org/pdf/1512.08836)
