@@ -7,9 +7,9 @@ permalink: /papers/
 This is a list of suggested papers to choose from, loosely organized by topic.
 
 ## Inference
-- Rezende, Danilo Jimenez, and Shakir Mohamed. "Variational inference with normalizing flows." _arXiv preprint arXiv:1505.05770_ (2015). [link](http://arxiv.org/pdf/1505.05770)
+- ~~Rezende, Danilo Jimenez, and Shakir Mohamed. "Variational inference with normalizing flows." _arXiv preprint arXiv:1505.05770_ (2015). [link](http://arxiv.org/pdf/1505.05770)~~
 
-- Kingma, Diederik P., Tim Salimans, and Max Welling. "Improving Variational Inference with Inverse Autoregressive Flow." _arXiv preprint arXiv:1606.04934_ (2016). [link](https://arxiv.org/abs/1606.04934)
+- ~~Kingma, Diederik P., Tim Salimans, and Max Welling. "Improving Variational Inference with Inverse Autoregressive Flow." _arXiv preprint arXiv:1606.04934_ (2016). [link](https://arxiv.org/abs/1606.04934)~~
 
 - Mnih, Andriy, and Danilo J. Rezende. "Variational inference for Monte Carlo objectives." _arXiv preprint arXiv:1602.06725_ (2016). [link](http://arxiv.org/pdf/1602.06725)
 
