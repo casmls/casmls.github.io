@@ -18,6 +18,10 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Kingma, Diederik P., and Max Welling. "Auto-encoding variational Bayes."_arXiv preprint arXiv:1312.6114_ (2013). [link](http://arxiv.org/pdf/1312.6114 )
 
 - Moreno, Alexander, et al. "Automatic Variational ABC." _arXiv preprint arXiv:1606.08549_ (2016). [link](http://arxiv.org/pdf/1606.08549)
+ 
+- Meeds, Edward, Robert Leenders, and Max Welling. "Hamiltonian ABC." _arXiv preprint arXiv:1503.01916_ (2015). [link](http://arxiv.org/pdf/1503.01916)
+ 
+- Meeds, Edward, and Max Welling. "GPS-ABC: Gaussian process surrogate approximate Bayesian computation." arXiv preprint arXiv:1401.2838 (2014). [link](http://arxiv.org/pdf/1401.2838)
 
 - Rhee, Chang-han, and Peter W. Glynn. "Unbiased estimation with square root convergence for SDE models." _Operations Research 63.5_ (2015): 1026-1043. [link](http://pubsonline.informs.org/doi/pdf/10.1287/opre.2015.1404)
 
