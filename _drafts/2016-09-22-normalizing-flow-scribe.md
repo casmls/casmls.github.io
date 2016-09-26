@@ -60,10 +60,9 @@ by Durk Kingma, Tim Salimans and Max Welling
   The form of transformation proposed here seems to have a very rich representative power. The performance would certainly depend on the specific neural network structure.
 
 # Visualizing planar flow
-Visualizing the behavior of planar flow: $$f(z) = z + u \tanh(w^T z + b),$$ as proposed in
-* Rezende, Danilo Jimenez, and Shakir Mohamed. "Variational inference with normalizing flows." arXiv preprint arXiv:1505.05770 (2015).
+Visualizing the behavior of planar flow: $$f(z) = z + u \tanh(w^T z + b),$$ as proposed by Rezende and Mohamed, 2015.
 
-author: Yuanjun Gao, 09/25/2016
+_author: Yuanjun Gao, 09/25/2016_
 
 
 ```python
