@@ -9,56 +9,63 @@ excerpt_separator: <!--more-->
 Last Thursday, Ben presented two papers on normalizing flows: Rezende and Mohamed, 2015, and Kingma, Salimans, and Welling, 2016. The papers present a scalable way to make the posterior approximation family of variational inference very rich. The key is to put a network of normalizing flows on top of the inference network. 
 <!--more-->
 
-1. Paper Summary
+**1. Paper Summary**
 
-  A (planar) normalizing flow is a function of the form:
+   A (planar) normalizing flow is a function of the form:
 
-  $$f(z)=z+uh(w^Tz+b)$$
+   $$f(z)=z+uh(w^Tz+b)$$
 
-  where $$z,u$$ and $$w$$ are vectors, $$b$$ is a scalar and $$h$$ is an activation function. There are two reasons for choosing these functions: (i) the determinant of the Jacobian can be computed in linear time by using the matrix determinant lemma; and (ii) the transformation is invertible (under certain conditions only, but we can reparametrize to ensure they’re always met, we will not go into those details though). Now, if we start with a random vector $$z_0$$​​ with distribution $$q_0$$ and apply $$k$$ normalizing flows $$z_k=f_k\circ f_{k-1}\circ...\circ f_1(z_0)$$, then the distribution of $$z_k$$​​ will be given by:
+   where $$z,u$$ and $$w$$ are vectors, $$b$$ is a scalar and $$h$$ is an activation function. There are two reasons for choosing these functions: (i) the determinant of the Jacobian can be computed in linear time by using the matrix determinant lemma; and (ii) the transformation is invertible (under certain conditions only, but we can reparametrize to ensure they’re always met, we will not go into those details though). Now, if we start with a random vector $$z_0$$ with distribution $$q_0$$ and apply $$k$$ normalizing flows $$z_k=f_k\circ f_{k-1}\circ...\circ f_1(z_0)$$, then the distribution of $$z_k$$​​ will be given by:
 
-  $$q_k(z_k)=q_0(f_1^{-1}\circ f_{2}^{-1}\circ...\circ f_k^{-1}(z_k))\prod_{i=1}^k|det(J_i(z_{i-1}))|^{-1}$$,
+   $$q_k(z_k) = q_0(f_1^{-1} \circ f_{2}^{-1} \circ ... \circ f_k^{-1}(z_k))
+     \prod_{i=1}^k|\det(J_i(z_{i-1}))|^{-1}$$,
 
-  where $$J_i$$​​ is the Jacobian of the $$i^{th}$$​​ normalizing flow, $$f_i$$​​. This allows us to write the ELBO as:
+   where $$J_i$$​​ is the Jacobian of the $$i^{th}$$​​ normalizing flow, $$f_i$$​​. This allows us to write the ELBO as:
 
-  $$-E_{q_k}[\log q_k(z_k)]+E_{q_k}[\log p(x,z_k)]=-E_{q_0}[\log q_0(z_0)]+E_{q_0}[\sum_{i=1}^k\log|det(J_i(z_{i-1}))|]+E_{q_0}[\log p(x,z_k)]$$,
+   $$-E_{q_k} [\log q_k(z_k)] + E_{q_k}[\log p(x,z_k)]$$
+   $$ = -E_{q_0} \left[\log q_0(z_0) \right] + E_{q_0}[\sum_{i=1}^k\log|\det(J_i(z_{i-1}))|]$$
+   $$ +E_{q_0}[\log p(x,z_k)]$$,
 
-  which can be optimized with stochastic gradient descent since $$q_0$$ is taken to be a Gaussian from which we can easily sample.
+   which can be optimized with stochastic gradient descent since $$q_0$$ is taken to be a Gaussian from which we can easily sample.
 
-  In addition to using planar normalizing flows, the authors also use radial normalizing flows, which are of the form:
+   In addition to using planar normalizing flows, the authors also use radial normalizing flows, which are of the form:
 
-  $$f(z)=z+\beta h(\alpha,r)(z-z_0)$$,
+   $$f(z)=z+\beta h(\alpha,r)(z-z_0)$$,
 
-  where $$z$$ and $$z_0$$ are vectors, $$\beta$$ is a scalar, $$\alpha$$ is a positive scalar, $$r=||z-z_0||$$ and $$h(\alpha,r)=1/(\alpha+r)$$. Once again, theses transformations are invertible if some conditions on their parameters are met and we can always reparametrize them so that they are indeed invertible. The Jacobian can also be computed in linear time.
+   where $$z$$ and $$z_0$$ are vectors, $$\beta$$ is a scalar,
+$$\alpha$$ is a positive scalar $$r=||z-z_0||$$ and
+$$h(\alpha,r)=1/(\alpha+r)$$. Once again, theses transformations are
+invertible if some conditions on their parameters are met and we can
+always reparametrize them so that they are indeed invertible. The
+Jacobian can also be computed in linear time.
 
-2. Discussion:
+**2. Discussion:**
+    The role of inference network: while in principal we can drop the inference network and optimize parameters of the normalizing flow for each data independently, the inference network allows for amortized inference by learning a direct mapping from data to latent distributions. This convenience might result in less accurate approximation, but makes computation much faster.
 
-  The role of inference network: while in principal we can drop the inference network and optimize parameters of the normalizing flow for each data independently, the inference network allows for amortized inference by learning a direct mapping from data to latent distributions. This convenience might result in less accurate approximation, but makes computation much faster.
+   Representative power of normalizing flow: while in Figure 1 of the paper we can visualize the amazing flexibility of the normalizing flows in transforming simple distributions to more complicated ones with only a small number of transforamtions, it is unclear whether the proposed normalizing flows is a universal approximator of all the distributions when the number of layers go to infinity. Also, it would be interesting to understand the scalability of normalizing flows in higher dimensional regime.
 
-  Representative power of normalizing flow: while in Figure 1 of the paper we can visualize the amazing flexibility of the normalizing flows in transforming simple distributions to more complicated ones with only a small number of transforamtions, it is unclear whether the proposed normalizing flows is a universal approximator of all the distributions when the number of layers go to infinity. Also, it would be interesting to understand the scalability of normalizing flows in higher dimensional regime.
+   The role of initial density: in experiments, the paper used a initial density $$q_0$$ as a multivariate Gaussian with diagonal covariance matrix, and parameterized the mean and variance with an inference network (which is equivalent to starting with standard normal, then apply a linear transformation). It is unclear how much benefit this initial density offers. Presumably, we can just set the initial density as a standard normal and let the normalizing flow also take care of the location and spread of the distribution. Another possibility is to first use the normalizing flow to modify the shape of the distribution, and after that, apply a linear transformation to change the location and spread of the distribution.
 
-  The role of initial density: in experiments, the paper used a initial density $$q_0$$ as a multivariate Gaussian with diagonal covariance matrix, and parameterized the mean and variance with an inference network (which is equivalent to starting with standard normal, then apply a linear transformation). It is unclear how much benefit this initial density offers. Presumably, we can just set the initial density as a standard normal and let the normalizing flow also take care of the location and spread of the distribution. Another possibility is to first use the normalizing flow to modify the shape of the distribution, and after that, apply a linear transformation to change the location and spread of the distribution.
+   Specific form of normalizing flows: the motivation for the specific form of normalizing flow is unclear and can be interesting. The Kingma et. al (2016) paper interprets the form as an MLP with a bottleneck hidden layer with a single unit. The optimal choice of transformation family is still an open question. In principal, any invertible (this isn't even necessary) and (piecewise) smooth transformation can act as normalizing flows.
 
-  Specific form of normalizing flows: the motivation for the specific form of normalizing flow is unclear and can be interesting. The Kingma et. al (2016) paper interprets the form as an MLP with a bottleneck hidden layer with a single unit. The optimal choice of transformation family is still an open question. In principal, any invertible (this isn't even necessary) and (piecewise) smooth transformation can act as normalizing flows.
-
-  Infinitestimal flows: The paper briefly touches upon the infinitesimal flows in section 3.2 without much further discussion. Is there a connection between infinitestimal flows and normalizing flows? Can we use the ideas from infinitesical flows to motivate some better normalizing flow structure?
+   Infinitestimal flows: The paper briefly touches upon the infinitesimal flows in section 3.2 without much further discussion. Is there a connection between infinitestimal flows and normalizing flows? Can we use the ideas from infinitesical flows to motivate some better normalizing flow structure?
 
 # Improving Variational Inference with Inverse Autoregressive Flow
 by Durk Kingma, Tim Salimans and Max Welling
 
-1. Paper summary:
+**1. Paper summary:**
 
-  This paper basically presents an extention of the previous paper by changing the transformation to:
+   This paper basically presents an extention of the previous paper by changing the transformation to:
 
-  $$f(z)=(z-\mu(z))/\sigma(z)$$
+   $$f(z)=(z-\mu(z))/\sigma(z)$$
 
-  where the $i^{th}$ element of $$\mu$$ and $$\sigma$$ depends only on the first $$(i-1)^{th}$$ elements of $$y$$. The form of $$\mu$$ and $$\sigma$$ is chosen by be deep marked autoencoders (Germain et al. 2015). The Jacobian is then lower triangular, whose determinants is just the product of its diagonal entries, $$-\prod\sigma_i(y)$$.
+   where the $i^{th}$ element of $$\mu$$ and $$\sigma$$ depends only on the first $$(i-1)^{th}$$ elements of $$y$$. The form of $$\mu$$ and $$\sigma$$ is chosen by be deep marked autoencoders (Germain et al. 2015). The Jacobian is then lower triangular, whose determinants is just the product of its diagonal entries, $$-\prod\sigma_i(y)$$.
 
-  The form can be thought of as the inverse function of autoregressive flow. Unlike autoregressive flow, the form allows parallel computation of each element of the transformation.
+   The form can be thought of as the inverse function of autoregressive flow. Unlike autoregressive flow, the form allows parallel computation of each element of the transformation.
 
-2. Discussion:
+**2. Discussion:**
 
-  The form of transformation proposed here seems to have a very rich representative power. The performance would certainly depend on the specific neural network structure.
+   The form of transformation proposed here seems to have a very rich representative power. The performance would certainly depend on the specific neural network structure.
 
 # Visualizing planar flow
 Visualizing the behavior of planar flow: $$f(z) = z + u \tanh(w^T z + b),$$ as proposed by Rezende and Mohamed, 2015.
