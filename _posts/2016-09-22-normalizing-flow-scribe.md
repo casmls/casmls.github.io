@@ -3,6 +3,7 @@ layout: post
 title:  "Variational Inference with Normalizing Flows"
 categories: general
 author: Yuanjun Gao and Gabriel Loaiza
+excerpt: Last Thursday, Ben presented two papers on normalizing flows: Rezende and Mohamed, 2015, and Kingma, Salimans, and Welling, 2016. The papers present a scalable way to make the posterior approximation family of variational inference very rich. The key is to put a network of normalizing flows on top of the inference network.
 ---
 
 Last Thursday, Ben presented two papers on normalizing flows: Rezende and Mohamed, 2015, and Kingma, Salimans, and Welling, 2016. The papers present a scalable way to make the posterior approximation family of variational inference very rich. The key is to put a network of normalizing flows on top of the inference network. 
