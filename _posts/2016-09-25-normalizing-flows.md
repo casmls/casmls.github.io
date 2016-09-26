@@ -59,7 +59,7 @@ by Durk Kingma, Tim Salimans and Max Welling
 
    $$f(z)=(z-\mu(z))/\sigma(z)$$
 
-   where the $i^{th}$ element of $$\mu$$ and $$\sigma$$ depends only on the first $$(i-1)^{th}$$ elements of $$y$$. The form of $$\mu$$ and $$\sigma$$ is chosen by be deep marked autoencoders (Germain et al. 2015). The Jacobian is then lower triangular, whose determinants is just the product of its diagonal entries, $$-\prod\sigma_i(y)$$.
+   where the $$i^{th}$$ element of $$\mu$$ and $$\sigma$$ depends only on the first $$(i-1)^{th}$$ elements of $$y$$. The form of $$\mu$$ and $$\sigma$$ is chosen by be deep marked autoencoders (Germain et al. 2015). The Jacobian is then lower triangular, whose determinants is just the product of its diagonal entries, $$-\prod\sigma_i(y)$$.
 
    The form can be thought of as the inverse function of autoregressive flow. Unlike autoregressive flow, the form allows parallel computation of each element of the transformation.
 
