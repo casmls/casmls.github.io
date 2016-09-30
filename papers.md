@@ -63,6 +63,8 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 
 - Nowozin, Sebastian, Botond Cseke, and Ryota Tomioka. "f-GAN: Training Generative Neural Samplers using Variational Divergence Minimization." _arXiv preprint arXiv:1606.00709_ (2016). [link](http://arxiv.org/pdf/1606.00709)
 
+- Chung, Junyoung, et al. "A recurrent latent variable model for sequential data." Advances in neural information processing systems. 2015. [link](https://arxiv.org/pdf/1506.02216.pdf)
+
 - Burda, Yuri, Roger Grosse, and Ruslan Salakhutdinov. "Importance weighted autoencoders." _arXiv preprint arXiv:1509.00519_ (2015). [link](http://arxiv.org/pdf/1509.00519)
 
 - He, Kaiming, et al. "Deep residual learning for image recognition." _arXiv preprint arXiv:1512.03385_ (2015). [link](http://arxiv.org/pdf/1512.03385)
