@@ -93,6 +93,7 @@ p, ol, ul, dl, .math-display {
 .math-display {
   display: inline-block;
   width: 100%;
+  text-align: center;
 }
 // Lists within lists
 li > ul, li > ol {
@@ -120,6 +121,10 @@ a {
 // Responsive media
 iframe, img, embed, object, video {
   max-width: 100%;
+  display: block;
+  margin: auto;
+//  width: 50%;
+  
 }
 img[align=left] {
   margin-right: 3%;

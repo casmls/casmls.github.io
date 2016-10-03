@@ -14,24 +14,32 @@ Last Thursday, Ben presented two papers on normalizing flows: Rezende and Mohame
 
    A (planar) normalizing flow is a function of the form:
 
-   $$f(z)=z+uh(w^Tz+b)$$
+   $$
+   f(z)=z+uh(w^Tz+b)
+   $$
 
    where $$z,u$$ and $$w$$ are vectors, $$b$$ is a scalar and $$h$$ is an activation function. There are two reasons for choosing these functions: (i) the determinant of the Jacobian can be computed in linear time by using the matrix determinant lemma; and (ii) the transformation is invertible (under certain conditions only, but we can reparametrize to ensure they’re always met, we will not go into those details though). Now, if we start with a random vector $$z_0$$ with distribution $$q_0$$ and apply $$k$$ normalizing flows $$z_k=f_k\circ f_{k-1}\circ...\circ f_1(z_0)$$, then the distribution of $$z_k$$​​ will be given by:
-
-   $$q_k(z_k) = q_0(f_1^{-1} \circ f_{2}^{-1} \circ ... \circ f_k^{-1}(z_k))
-     \prod_{i=1}^k|\det(J_i(z_{i-1}))|^{-1}$$,
-
+   
+   $$
+   q_k(z_k) = q_0(f_1^{-1} \circ f_{2}^{-1} \circ ... \circ f_k^{-1}(z_k))
+   \prod_{i=1}^k|\det(J_i(z_{i-1}))|^{-1}
+   $$
+    
    where $$J_i$$​​ is the Jacobian of the $$i^{th}$$​​ normalizing flow, $$f_i$$​​. This allows us to write the ELBO as:
 
-   $$-E_{q_k} [\log q_k(z_k)] + E_{q_k}[\log p(x,z_k)]$$
-   $$ = -E_{q_0} \left[\log q_0(z_0) \right] + E_{q_0}[\sum_{i=1}^k\log|\det(J_i(z_{i-1}))|]$$
-   $$ +E_{q_0}[\log p(x,z_k)]$$,
+   $$
+   -E_{q_k} [\log q_k(z_k)] + E_{q_k}[\log p(x,z_k)]
+   $$
+   
+   $$
+   = -E_{q_0} \left[\log q_0(z_0) \right] + E_{q_0}[\sum_{i=1}^k\log|\det(J_i(z_{i-1}))|] +E_{q_0}[\log p(x,z_k)]
+   $$
 
    which can be optimized with stochastic gradient descent since $$q_0$$ is taken to be a Gaussian from which we can easily sample.
 
    In addition to using planar normalizing flows, the authors also use radial normalizing flows, which are of the form:
 
-   $$f(z)=z+\beta h(\alpha,r)(z-z_0)$$,
+   $$f(z)=z+\beta h(\alpha,r)(z-z_0)$$
 
    where $$z$$ and $$z_0$$ are vectors, $$\beta$$ is a scalar,
 $$\alpha$$ is a positive scalar $$r=||z-z_0||$$ and
