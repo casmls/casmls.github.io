@@ -4,7 +4,7 @@ title: "Pseudo-marginal methods, Variational Bayes, and ABC"
 categories: general
 author: Christian Naesseth
 excerpt_separator: <!--more-->
-comments: false
+comments: true
 ---
 
 After last week's readings discussion, I put together some notes
