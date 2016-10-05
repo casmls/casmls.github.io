@@ -43,7 +43,7 @@ theme_settings:
   youtube:
 
   # Scripts
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
+  google_analytics: "UA-56811282-3" 
   disqus_shortname: casmls
   katex: true # Enable if using math markup
 
