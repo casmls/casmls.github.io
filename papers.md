@@ -59,9 +59,9 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Kawaguchi, Kenji. "Deep Learning without Poor Local Minima." _arXiv preprint arXiv:1605.07110_ (2016). [link](http://arxiv.org/abs/1605.07110)
 
 ## Deep Learning
-- Goodfellow, Ian, et al. "Generative adversarial nets." _Neural Information Processing Systems (NIPS)_ (2014). [link](http://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf)
+- ~~Goodfellow, Ian, et al. "Generative adversarial nets." _Neural Information Processing Systems (NIPS)_ (2014). [link](http://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf)~~
 
-- Nowozin, Sebastian, Botond Cseke, and Ryota Tomioka. "f-GAN: Training Generative Neural Samplers using Variational Divergence Minimization." _arXiv preprint arXiv:1606.00709_ (2016). [link](http://arxiv.org/pdf/1606.00709)
+- ~~Nowozin, Sebastian, Botond Cseke, and Ryota Tomioka. "f-GAN: Training Generative Neural Samplers using Variational Divergence Minimization." _arXiv preprint arXiv:1606.00709_ (2016). [link](http://arxiv.org/pdf/1606.00709)~~
 
 - Chung, Junyoung, et al. "A recurrent latent variable model for sequential data." Advances in neural information processing systems. 2015. [link](https://arxiv.org/pdf/1506.02216.pdf)
 
