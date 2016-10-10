@@ -83,6 +83,11 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 
 - Maaløe, Lars, et al. "Auxiliary Deep Generative Models." _arXiv preprint arXiv:1602.05473_ (2016). [link](http://arxiv.org/pdf/1602.05473.pdf)
 
+
+- Gregor, Karol, et al. "DRAW: A recurrent neural network for image generation." _arXiv preprint arXiv:1502.04623_ (2015). [link](http://arxiv.org/pdf/1502.04623.pdf)
+
+- Mnih, Volodymyr, Nicolas Heess, and Alex Graves. "Recurrent models of visual attention." Advances in Neural Information Processing Systems. 2014. [link](http://papers.nips.cc/paper/5542-recurrent-models-of-visual-attention.pdf)
+
 - Xu, Kelvin, et al. "Show, attend and tell: Neural image caption generation with visual attention." _arXiv preprint arXiv:1502.03044 2.3_ (2015): 5. [link](http://www.jmlr.org/proceedings/papers/v37/xuc15.pdf)
 
 - Eslami, S. M., et al. "Attend, Infer, Repeat: Fast Scene Understanding with Generative Models." _arXiv preprint arXiv:1603.08575_ (2016). [link](http://arxiv.org/pdf/1603.08575.pdf)
@@ -102,8 +107,6 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Nalisnick, Eric, and Padhraic Smyth. "Deep Generative Models with Stick-Breaking Priors." _arXiv preprint arXiv:1605.06197_ (2016). [link](http://arxiv.org/pdf/1605.06197)
 
 - Kulkarni, Tejas D., et al. "Deep convolutional inverse graphics network." _Neural Information Processing Systems (NIPS)_ (2015). [link](http://papers.nips.cc/paper/5851-deep-convolutional-inverse-graphics-network.pdf)
-
-- Gregor, Karol, et al. "DRAW: A recurrent neural network for image generation." _arXiv preprint arXiv:1502.04623_ (2015). [link](http://arxiv.org/pdf/1502.04623.pdf)
 
 - Gatys, Leon A., Alexander S. Ecker, and Matthias Bethge. "A neural algorithm of artistic style." _arXiv preprint arXiv:1508.06576_ (2015). [link](http://arxiv.org/pdf/1508.06576)
 
