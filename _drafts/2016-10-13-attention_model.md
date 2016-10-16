@@ -11,7 +11,7 @@ We read two papers, the "DRAW" paper and the "ShowAttendTell" paper, that embed 
 <!--more-->
 
 ## DRAW: A Recurrent Neural Network For Image Generation
-** Paper summary **
+
 
 The paper is based on the following two ideas. The generation of an image should be refined in multiple steps. In each of multiple steps of refinement, the model should focuses its attention only on as small region of the image. 
 
@@ -40,14 +40,13 @@ $$L = \langle L^x + L^z \rangle_{z\sim Q(Z | h^{enc})}$$.
 
 The paper shows interesting results in several tasks. In the image generation task, the generation process does exhibit some behavior progressive refinement, though still different with the way we humans draw digits. 
  
-![Fig. 1 in the paper](/img/draw_result.png)
+![Fig. 1 in the paper]({{site.base_url}}/img/draw_result.png)
+
 (Also check animated results from Eric Jang's blog [link](http://blog.evjang.com/2016/06/understanding-and-implementing.html))
 
 The model improves the predictive log-likelihood over that of competing models including the auto-encoder. In the task of identifying numbers in cluttered images, the model often correctly focus its attention to the numbers. 
 
 ## Show, Attend and Tell: Neural Image Caption Generation with Visual Attention 
-
-** Paper summary:**
 
 The argument of the paper is that the attention moves in the image as the caption generation for the image proceeds in steps.
 
@@ -78,7 +77,7 @@ _Extra constraint_: every location should be focused on at least once during the
 
 The paper shows significant improvement of BLEU score over that of previous methods on several caption generation tasks. In their example images, a lot of attention locations can be well explained. Figure 5 of the paper shows several good examples. 
 
-![Fig. 5 in the paper](/img/attention_location.png)
+![Fig. 5 in the paper]({{site.base_url}}/img/attention_location.png)
 
 
 
