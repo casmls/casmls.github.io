@@ -17,8 +17,7 @@ The paper is based on the following two ideas. The generation of an image should
 
 As a DNN, the model is a combination of LSTM and auto-encoder. Model representation of the draw model is shown in the following image (Fig. 2 of the paper). 
 
-![The model](/img/draw_model_representation.png =200x100)
-<img src="/img/draw_model_representation.png" alt="The model" style="width: 200px;"/>
+<img src="/img/draw_model_representation.png" alt="The model" style="width: 100px;"/>
 
 At each time step, data passes vertically from the bottom to the top. 
 
@@ -41,7 +40,9 @@ $$L = \langle L^x + L^z \rangle_{z\sim Q(Z | h^{enc})}$$.
 
 The paper shows interesting results in several tasks. In the image generation task, the generation process does exhibit some behavior progressive refinement, though still different with the way we humans draw digits. 
  
-![Fig. 1 in the paper](/img/draw_result.png)
+<!---[Fig. 1 in the paper](/img/draw_result.png) --->
+
+<img src="/img/draw_result.png" alt="Some results of the DRAW paper" style="width: 100px;"/>
 
 (Also check animated results from Eric Jang's blog [link](http://blog.evjang.com/2016/06/understanding-and-implementing.html))
 
@@ -59,7 +60,7 @@ $$e_{ti} = f_{att}(h_{t-1}, a_i)$$
 $$\alpha_{ti} = \frac{exp(e_{ti})}{\sum_k exp(e_{tk})}$$
 
 
-The context vector z_{t} (the input to the LSTM) is calculated with either hard attention or soft attention.
+The context vector $$z_{t}$$ (the input to the LSTM) is calculated with either hard attention or soft attention.
 
 _Hard attention_: the attention location at every step is a categrical r.v. and thus is a hidden variable. 
 
@@ -78,7 +79,8 @@ _Extra constraint_: every location should be focused on at least once during the
 
 The paper shows significant improvement of BLEU score over that of previous methods on several caption generation tasks. In their example images, a lot of attention locations can be well explained. Figure 5 of the paper shows several good examples. 
 
-![Fig. 5 in the paper](/img/attention_location.png)
+<!---![Fig. 5 in the paper](/img/attention_location.png)--->
+<img src="/img/attention_location.png" alt="Examples of attention locations" style="width: 100px;"/>
 
 
 
