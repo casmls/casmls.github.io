@@ -17,7 +17,7 @@ The paper is based on the following two ideas. The generation of an image should
 
 As a DNN, the model is a combination of LSTM and auto-encoder. Model representation of the draw model is shown in the following image (Fig. 2 of the paper). 
 
-<img src="/img/draw_model_representation.png" alt="The model" style="width:30px;"/>
+<img src="/img/draw_model_representation.png" alt="The model" width="100"/>
 
 At each time step, data passes vertically from the bottom to the top. 
 
