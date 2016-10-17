@@ -44,6 +44,7 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Pakman, Ari, et al. "Stochastic Bouncy Particle Sampler." _arXiv preprint arXiv:1609.00770_ (2016). [link](http://arxiv.org/abs/1609.00770)
 
 - Polloc, Murray et al. “The Scalable Langevin Exact Algorithm: Bayesian Inference for Big Data” _arXiv preprint arXiv:1609.03436_ (2016). [link](https://arxiv.org/abs/1609.03436)
+- Giles, Mike, et al. "Multilevel Monte Carlo for Scalable Bayesian Computations." arXiv preprint arXiv:1609.06144 (2016). [link](https://arxiv.org/pdf/1609.06144)
 
 ## Theory
 - Hardt, Moritz, Tengyu Ma, and Benjamin Recht. "Gradient Descent Learns Linear Dynamical Systems." arXiv preprint arXiv:1609.05191 (2016). [link](https://arxiv.org/pdf/1609.05191)
