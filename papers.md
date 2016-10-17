@@ -46,6 +46,8 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Polloc, Murray et al. “The Scalable Langevin Exact Algorithm: Bayesian Inference for Big Data” _arXiv preprint arXiv:1609.03436_ (2016). [link](https://arxiv.org/abs/1609.03436)
 
 ## Theory
+- Hardt, Moritz, Tengyu Ma, and Benjamin Recht. "Gradient Descent Learns Linear Dynamical Systems." arXiv preprint arXiv:1609.05191 (2016). [link](https://arxiv.org/pdf/1609.05191)
+
 - Yang, Fanny, Sivaraman Balakrishnan, and Martin J. Wainwright. "Statistical and computational guarantees for the Baum-Welch algorithm."  _53rd Annual Allerton Conference on Communication, Control, and Computing._ IEEE (2015). [link](http://arxiv.org/pdf/1512.08269)
 
 - Chen, Yudong, and Martin J. Wainwright. "Fast low-rank estimation by projected gradient descent: General statistical and algorithmic guarantees."_arXiv preprint arXiv:1509.03025_ (2015). [link](http://arxiv.org/pdf/1509.03025)
