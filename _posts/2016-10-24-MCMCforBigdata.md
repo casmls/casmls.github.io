@@ -108,12 +108,12 @@ Note that we evaluate the exponential term only at $$\kappa$$ data points instea
 The following figure (from Figure 1 of the paper) shows an example for layers simulated for a Brownian motion sample path (left), and Brownian motion sample path
 simulated as finite collection of event times (right).
 
-![Figure1]({{site.base_url}}/img/fig1MCMCforBigData.png)
+![Figure1]({{site.base_url}}/img/fig1MCMCforBigData.PNG)
 
 The next figure  (also from Figure 1 of the paper) shows the evaluated $$\Phi$$ function at those points (left) as well as un-normalized importance weight process
 of sample path, comprising of exponential growth between event times and discrete times at event times.
 
-![Figure2]({{site.base_url}}/img/fig2MCMCforBigData.png)
+![Figure2]({{site.base_url}}/img/fig2MCMCforBigData.PNG)
 
 Although the IS-KBM framework is conceptually appealing, in order to normalize we require a number of trajectories, noting that the
 variance of the importance sampling weights of these trajectories will increase with time. This means that one sample could have weight 
