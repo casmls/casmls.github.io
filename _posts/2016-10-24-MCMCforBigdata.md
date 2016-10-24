@@ -21,7 +21,9 @@ iterative cost as a function of data size.
 ### Background
 
 The problems with current methods like Metropolis Hastings, especially for big data, include:
+
 * They need $$O(n)$$ calculation at each step for reject/accept decisions,
+
 * They need $$O(n)$$ new variables when augmenting data.
 
 Hence, modifications are needed when working with big data.
