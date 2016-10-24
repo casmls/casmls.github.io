@@ -58,6 +58,8 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 
 - Kawaguchi, Kenji. "Deep Learning without Poor Local Minima." _arXiv preprint arXiv:1605.07110_ (2016). [link](http://arxiv.org/abs/1605.07110)
 
+- Mei, Song, Yu Bai, and Andrea Montanari. "The Landscape of Empirical Risk for Non-convex Losses." arXiv preprint arXiv:1607.06534 (2016). [link](https://arxiv.org/pdf/1607.06534)
+
 ## Deep Learning
 - ~~Goodfellow, Ian, et al. "Generative adversarial nets." _Neural Information Processing Systems (NIPS)_ (2014). [link](http://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf)~~
 
