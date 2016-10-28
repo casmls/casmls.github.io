@@ -151,7 +151,8 @@ In this case, `abc.png` is located in the `img` folder under root.
 ### References
 
 [1] Mei, Song, Yu Bai, and Andrea Montanari. "The Landscape of Empirical Risk for Non-convex Losses." _arXiv preprint arXiv:1607.06534_ (2016). [link](https://arxiv.org/abs/1607.06534)
-[2] Kenji Kawaguchi. "Deep Learning without Poor Local Minima” _arXiv preprint arXiv:1605.07110_ (2016). [link](https://arxiv.org/abs/1605.07110)
+
+[2] Kawaguchi,Kenji. "Deep Learning without Poor Local Minima” _arXiv preprint arXiv:1605.07110_ (2016). [link](https://arxiv.org/abs/1605.07110)
 ...
 
 
