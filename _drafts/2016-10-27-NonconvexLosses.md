@@ -35,7 +35,7 @@ descent approaches exponentially fast.
 
 We note that the empirical risk is non-convex. However, the authors argue that non-convex losses can be 
 beneficial for this task because they are unbounded, they have a smaler number of support vectors, and 
-models such as neural networks have been shown to ``work better.'' 
+models such as neural networks have been shown to "work better."
 
 The _true risk_, $$R(w) = E((y-\sigma(\langle w, x\rangle))^2)$$ is convex in terms of $$w$$, and the 
 authors show that the empirical risk function ends up sharing many of these nice properties. The following graph shows
@@ -47,18 +47,21 @@ global minimum, verifying the effectiveness of stochastic gradient descent.
 [INCLUDE IMAGE]
 
 We make the following assumptions: 
-1. $\sigma$ is three times differentiable, where $$\sigma'(z) > 0$$ and the first three derivatives are bounded.
-2. The feature vector X is **sub-Gaussian**, i.e. for all $$\lambda \in \mathbb{R}^D$$, $$E(e^{\langle \lambda, X \rangle})
+
+1 $\sigma$ is three times differentiable, where $$\sigma'(z) > 0$$ and the first three derivatives are bounded.
+2 The feature vector X is **sub-Gaussian**, i.e. for all $$\lambda \in \mathbb{R}^D$$, $$E(e^{\langle \lambda, X \rangle})
 \leq e^{\frac{\tau^2 \|\lambda\|_2^2}{2}}$$.
-3. X spans all directions in $$R^d$$ so $$E(XX^T) \succeq c\tau^2 I_{d \times d}$$ for some $$0 < c < 1$$.
+3 X spans all directions in $$R^d$$ so $$E(XX^T) \succeq c\tau^2 I_{d \times d}$$ for some $$0 < c < 1$$.
 
 ### Results
 
 The main result is **Theorem 1** which has three parts. If $$n \geq Cd \log d$$,
+
 1. $$\hat R_n(w)$$ has a unique local optimizer, which is also global. This impleis no other critical points exist.
 2. Gradient descent converges exponentially fast.
 3. The global optimum of the empirical risk $$\hat w_n$$ converges to the true minimum $$w_0$$: $$\|hat w_n - w_0\|_2
 \leq C \sqrt{(d\log n)/n}$$. 
+
 Looking at $$n \geq Cd \log d$$, $$n$ is roughly the same scale as $$d$$, and becuase $$n$$ cannot be less than $$d$$, 
 these results are ideal. 
 
@@ -66,6 +69,37 @@ The authors verify these results by running experiments with simulated data and 
 verify that once $$$n$$ crosses some critical threshold, the convergence results change dramatically. 
 
 ### Proof Ideas
+
+We discuss a few theorems the authors develop to construct their proof (which is too technical to include in this writeup). The 
+meat of their argument lies in **Theorem 2**, which conerns the true risk $$R(w)$$. Summarizing these results,
+
+* The true risk $$R(w)$$ has a unique minimizer $$w_0$$.
+* The Hessian has bounds, where in a small ball around the the global optimum, we have a strongly convex function 
+(i.e. we converge very quickly):
+
+$$
+\inf_{w_0, \epsilon_0} \lambda_{\min} (\nabla^2 R(w)) \geq \kappa_0
+$$
+
+* The gradient has bounds, such that when we are outside of a ball, the graidents are non-zero:
+
+$$
+\inf_{w \in B(0, B_0) \set minus B(W_0, \epsilon_0)} \| \nabla R(w) \|_2 \geq L_0
+$$
+Namely, this implies our gradients point toward the optimum.
+
+The remaining theorems bound the probabilities that the gradient and Hessian of empirical risk differ from 
+the true risk by constant. Combining these probabilities with Theorem 2, the authors conclude that the desirable qualities 
+are recovered with a high probability. 
+
+### Discussion
+We were curious how the proofs generalize to functions outside of squared loss, since in real life squared-loss 
+isn't the most frequently used function for classification.
+
+Overall, we thought this was a very well-written paper that did a good job of stating the high-level at the beginning, 
+while exploring the technical details throughout. 
+
+
 
 Use the excerpt_separator to mark the end of the short intro
 (that's all that show's up on the homepage)
