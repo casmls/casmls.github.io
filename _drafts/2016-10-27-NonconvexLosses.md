@@ -82,7 +82,7 @@ $$
 \inf_{w_0, \epsilon_0} \lambda_{\min} (\nabla^2 R(w)) \geq \kappa_0
 $$
 
-* The gradient of $$R(w)$$ has bounds, such that when we are outside of a ball centered at the true value $$w_0$$, the graidents are non-zero:
+* The gradient of $$R(w)$$ has bounds, such that when we are outside of a ball centered at the true value $$w_0$$, the gradients are non-zero:
 
 $$
 \inf_{w \in B(0, B_0) \set minus B(W_0, \epsilon_0)} \| \nabla R(w) \|_2 \geq L_0
