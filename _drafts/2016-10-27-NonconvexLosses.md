@@ -44,7 +44,7 @@ is a loss with local minima that are close to the risk global minimum. Niether o
 for sufficient sample data, the function behaves like the graph on the right with a local minimum that is the risk 
 global minimum, verifying the effectiveness of stochastic gradient descent. 
 
-[INCLUDE IMAGE]
+![Empirical Risk Landscape]({{site.base_url}}/img/nonconvex_empirical_risk.png)
 
 We make the following assumptions: 
 
@@ -149,10 +149,6 @@ We spent a lot of time discussing how realistic this claim is. We note that it i
 
 All-in all, we thought this was a well-organized paper that outlined intuitive and important theoretical results for deep neural networks.
 
-This is a figure. Note that `site.base_url` refers to the homepage.
-In this case, `abc.png` is located in the `img` folder under root.
-
-![ABC]({{site.base_url}}/img/abc.png)
 
 ### References
 
