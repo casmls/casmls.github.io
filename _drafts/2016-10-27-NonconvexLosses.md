@@ -19,7 +19,7 @@ critical point is a saddle point.
 
 <!--more-->
 
-# The Landscape of Empirical Risk for Non-convex Losses
+## The Landscape of Empirical Risk for Non-convex Losses
 
 While non-convex optimization has historically been associated with NP-hardness, there are a plethora of 
 non-convex functions that can be optimized more easily by taking advantage of some special structural
@@ -90,7 +90,7 @@ Namely, this implies our gradients point toward the optimum.
 
 The remaining theorems bound the probabilities that the gradient and Hessian of empirical risk differ from 
 the true risk by constant. Combining these probabilities with Theorem 2, the authors conclude that the desirable qualities 
-are recovered with a high probability. 
+are recovered with a high probability.
 
 ### Discussion
 We were curious how the proofs generalize to functions outside of squared loss, since in real life squared-loss 
@@ -99,77 +99,59 @@ isn't the most frequently used function for classification.
 Overall, we thought this was a very well-written paper that did a good job of stating the high-level at the beginning, 
 while exploring the technical details throughout. 
 
+## Deep Learning without Poor Local Minima
 
+The key assumption of this paper is that, under certain conditions, deep linear neural networks are similar to deep 
+nonlinear neural networks. The author proves 4 optimization results for deep linear neural networks, and via a reduction, 
+shows that these extend to nonlinear neural networks.
 
-Use the excerpt_separator to mark the end of the short intro
-(that's all that show's up on the homepage)
+### Setup
 
-# This is a first level heading
-
-## This is a second level heading
-
-## This is a third level heading
-
-> This is a
-> blockquote
-> with
->
-> two paragraphs
-
-This is a list:
-* A
-* B
-* C
-
-If your list items span multiple paragraphs, intend the items with three spaces.
-Here the list is enumerated.
-
-1.   This is the first sentence.
-
-     This is the second sentence.
-
-2.   And so on...
-
-3.   And so forth...
-
-This is **bold text**.
-This is _italic text_.
-This is ~~strikeout text~~.
-
-This is an inline equation: $$a^2 + b^2 = c^2$$. You have to use two
-dollar signs to open and close, not one like in Latex.
-To have a centered equation, write it as a pararaph that starts and
-ends with the two dollar signs:
+Our data is of the form $$(X, Y)$$, where, for some weight parameters $$W$$ and a nonlinearity $$\sigma(\cdot)$$, our 
+predictions for a nonlinear network take the following form
 
 $$
-p(\theta \, | \, y) \propto p(\theta) \, 
-p(y \, | \, \theta).
+\hat Y(W,X) = \sigma__{H+1}(W_{H+1}\sigma_H(\cdots (\sigma_1(W_1X)) \cdots ))
 $$
 
-I don't think you can do align blocks yet.
+We use squared loss: $$L = \frac{1}{2} \| \hat Y(W,X) - Y \|^2_F$$, where $$\|\cdot \|_F$$ is the Frobenius norm. 
+It has been proven that this optimization is NP-hard. However, for now, let's assume a deep linear network. That is, $$\sigma(\cdot) = 1$$, so 
+$$\hat Y(W,X) = W_{H+1}W_H \cdots W_1X$$
+The author shows that this function is non-conve in the product of the weight matrices. As an example, take the simplest case, where $$X = Y = 1$$, and we have weight scalars $$w_1$$ and $$w_2$$. The plot below depicts our loss function $$(w_1w_2-1)^2$$. As we can see, even in the simplest case, there are infinite global minima when $$w_1 = \frac{1}{w_2}$$, in addition to saddle points.
 
-This is `inline  code`. 
-Code blocks are intended paragraphs with four spaces:
+(INCLUDE PICTURE)
 
-```python
-F = lambda n: ((1+np.sqrt(5))**n - (1-np.sqrt(5))**n) / (2**n * np.sqrt(5))
-```
+### Results
+The main result for deep linear networks is in **Theorem 2.3**. Here, under reasonable assumptions for the rank of our data, for any depth $$H \geq 1$$ and $$p$$ the smallest width of a hidden layer, the loss function $$L(W)$$ has the following properties:
+
+1. Non-convex and non-concave
+2. Every local optimum is global
+3. Every critical point that is not a global minimum is a saddle point
+4. Rank($$W_H \cdots W_2)= p$$ implies the Hessian at a saddle point has at least one negative eigenvalue.
+
+We note that a Hessian having at least one negative eigenvalue is "nice", in that it implies there are no flat regions in the funcion. Briefly, the proof ideas are as follows. For 1, if we set one $$W$$ entry to 0, the product is fixed at 0, meaning that the function doesn't change in $$W$$, implying non-convexity. For 2, we rely on the notion of a "certificate of optimality"; that is, we check that at every local minimum, $$0 = X(X^TW^T-Y^T)$$, implying the local optimum is global. 3 follows naturally from 2, and 4 is somewhat technical. For the full proofs, refer to the original paper. 
+
+We next focus on a reduction from nonlinear neural networks to linear neural networks. Here, we take $\sigma(\cdot)$ as the hinge loss, i.e. $$\sigma(b) = \max(b, 0)$$. Taking advantage of a neural network's graphical strucutre, the author notes we can rewrite the objective by summing over all possible paths, introducing a binary random variable $$Z_i$$ to denote those that are turned "on" by the activation function. Specifically, we can write the following, where $$q$$ is a normalizatoin constant and $$\Psi$$ is the toal number of paths from the inputs to each output:
+
+$$
+\hat Y(W,X)_{i,j} = q \sum_{p=1}^\Psi [X_i]_{(j,p)}[Z_i]_{(j,p)} \prod_{k=1}^{H+1} w^{(k)}_{(j,p)}.
+$$
+
+Now, we introduce the central assumptoin: Each $$Z$$ is independent of $$X$$, and is a Bernoulli random variable with a global probability $$p$$. Thus, replacing the $$Z_i$$ with $$p$$ in the above equation reduces this loss to that of a deep linear neural networks, so all the results from Theorem 2.3 hold.
+
+We spent a lot of time discussing how realistic this claim is. We note that it improves upon previous work, which had stronger assumptions and proved weaker results. However, it appears suspicious that all the $$Z_i$$ are i.i.d. random variables, as this claim should receive scrutiny. 
+
+All-in all, we thought this was a well-organized paper that outlined intuitive and important theoretical results for deep neural networks.
+
 This is a figure. Note that `site.base_url` refers to the homepage.
 In this case, `abc.png` is located in the `img` folder under root.
 
 ![ABC]({{site.base_url}}/img/abc.png)
 
 ### References
-I've just been copying and pastying references as follows: 
 
-[1] Meeds, Edward, Robert Leenders, and Max Welling. "Hamiltonian ABC." _arXiv preprint arXiv:1503.01916_ (2015). [link](http://arxiv.org/pdf/1503.01916)
+[1] Mei, Song, Yu Bai, and Andrea Montanari. "The Landscape of Empirical Risk for Non-convex Losses." _arXiv preprint arXiv:1607.06534_ (2016). [link](https://arxiv.org/abs/1607.06534)
+[2] Kenji Kawaguchi. "Deep Learning without Poor Local Minima” _arXiv preprint arXiv:1605.07110_ (2016). [link](https://arxiv.org/abs/1605.07110)
 ...
 
-### Footnotes
-Here's my trick for footnotes. You can write HTML inside markdown, so I just create a
-div with the id footnotes and then add a link[<sup>1</sup>](#footnotes)
-
-<div id="footnotes"></div>
-1. like this.
-2. ...
 
