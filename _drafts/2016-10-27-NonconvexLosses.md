@@ -7,8 +7,7 @@ excerpt_separator: <!--more-->
 comments: true
 ---
 
-Two papers this week focused on proving nice results of using stochastic gradients to
-optimize non-convex loss functions. 
+Two papers this week proved convergence results for optimizing non-convex loss functions using stochastic gradients. 
 In The Landscape of Empirical Risk for Non-convex Losses by Mei, Song, Yu Bai, and Andrea Montanari, 2016 [1], the authors
 show that while empirical risk for squared loss is non-convex for linear classifiers, there are
 numerous desirable qualities once we reach a certain sample size, namely exponentially fast
