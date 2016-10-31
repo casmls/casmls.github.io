@@ -74,7 +74,7 @@ risk $$\hat w_n$$ converges to the
 true minimum $$w_0$$:
 
 
-$$\|\hat w_n - w_0\|_2 \leq C \sqrt{(d\log n)/n}$$. 
+$$\|\hat w_n - w_0\|_2 \leq C \sqrt{(d\log n)/n}.$$
 
 Looking at $$n \geq Cd \log d$$, $$n$$ is roughly the same scale as
 $$d$$, and becuase $$n$$ cannot be less than $$d$$, these results are
