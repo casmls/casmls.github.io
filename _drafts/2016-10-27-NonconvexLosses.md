@@ -124,7 +124,7 @@ $$
 
 The author shows that this function is non-convex in the product of the weight matrices. As an example, take the simplest case, where $$X = Y = 1$$, and we have weight scalars $$w_1$$ and $$w_2$$. The plot below depicts our loss function $$(w_1w_2-1)^2$$. As we can see, even in the simplest case, there are infinite global minima when $$w_1 = \frac{1}{w_2}$$, in addition to saddle points.
 
-(INCLUDE PICTURE)
+![Deep Linear Plot]({{site.base_url}}/img/deep_linear_plot.png)
 
 ### Results
 The main result for deep linear networks is in **Theorem 2.3**. Here, under reasonable assumptions for the rank of our data, for any depth $$H \geq 1$$ and $$p$$ the smallest width of a hidden layer, the loss function $$L(W)$$ has the following properties:
