@@ -34,7 +34,7 @@ descent approaches exponentially fast.
 
 We note that the empirical risk is non-convex. However, the authors argue that non-convex losses can be 
 beneficial for this task because they are unbounded, they have a smaller number of support vectors, and 
-models such as neural networks have been shown to "work better."
+models that use non-convex losses (such as neural networks) have been quite effective.
 
 The _true risk_, $$R(w) = E((y-\sigma(\langle w, x\rangle))^2)$$ is convex in terms of $$w$$, and the 
 authors show that the empirical risk function ends up sharing many of these nice properties. The following graph shows
@@ -47,7 +47,7 @@ global minimum, verifying the effectiveness of stochastic gradient descent.
 
 We make the following assumptions: 
 
-1. $\sigma$ is three times differentiable, where $$\sigma'(z) > 0$$ and the first three derivatives are bounded.
+1. $$\sigma$$ is three times differentiable, where $$\sigma'(z) > 0$$ and the first three derivatives are bounded.
 2. The feature vector X is **sub-Gaussian**, i.e. for all $$\lambda \in \mathbb{R}^D$$, $$E(e^{\langle \lambda, X \rangle})
 \leq e^{\frac{\tau^2 \|\lambda\|_2^2}{2}}$$.
 3. $$X$$ spans all directions in $$R^d$$ so $$E(XX^T) \succeq c\tau^2 I_{d \times d}$$ for some $$0 < c < 1$$.
@@ -79,14 +79,15 @@ meat of their argument lies in **Theorem 2**, which conerns the true risk $$R(w)
 (i.e. we converge very quickly):
 
 $$
-\inf_{w_0, \epsilon_0} \lambda_{\min} (\nabla^2 R(w)) \geq \kappa_0
+\inf_{w_0, \epsilon_0} \lambda_{\min} (\nabla^2 R(w)) \geq \kappa_0.
 $$
 
 * The gradient of $$R(w)$$ has bounds, such that when we are outside of a ball centered at the true value $$w_0$$, the gradients are non-zero:
 
 $$
-\inf_{w \in B(0, B_0) \set minus B(W_0, \epsilon_0)} \| \nabla R(w) \|_2 \geq L_0
+\inf_{w \in B(0, B_0) \set minus B(W_0, \epsilon_0)} \| \nabla R(w) \|_2 \geq L_0.
 $$
+
 Namely, this implies our gradients point toward the optimum.
 
 The remaining theorems in the paper bound the probabilities that the gradient and Hessian of empirical risk differ from 
@@ -112,7 +113,7 @@ Our data is of the form $$(X, Y)$$, where, for some weight parameters $$W$$ and 
 predictions for a nonlinear network take the following form:
 
 $$
-\hat Y(W,X) = \sigma__{H+1}(W_{H+1}\sigma_H(\cdots (\sigma_1(W_1X)) \cdots ))
+\hat Y(W,X) = \sigma__{H+1}(W_{H+1}\sigma_H(\cdots (\sigma_1(W_1X)) \cdots )).
 $$
 
 We use squared loss: $$L = \frac{1}{2} \| \hat Y(W,X) - Y \|^2_F$$, where $$\|\cdot \|_F$$ is the Frobenius norm. 
@@ -129,9 +130,9 @@ The author shows that this function is non-convex in the product of the weight m
 ### Results
 The main result for deep linear networks is in **Theorem 2.3**. Here, under reasonable assumptions for the rank of our data, for any depth $$H \geq 1$$ and $$p$$ the smallest width of a hidden layer, the loss function $$L(W)$$ has the following properties:
 
-1. It is non-convex and non-concave
-2. Every local optimum is global
-3. Every critical point that is not a global minimum is a saddle point
+1. It is non-convex and non-concave.
+2. Every local optimum is global.
+3. Every critical point that is not a global minimum is a saddle point.
 4. If Rank($$W_H \cdots W_2)= p$$, then the Hessian at a saddle point has at least one negative eigenvalue.
 
 We note that a Hessian having at least one negative eigenvalue is "nice", in that it implies there are no flat regions in the funcion. Briefly, the proof ideas are as follows. For 1, if we set one $$W$$ entry to 0, the product is fixed at 0, meaning that the function doesn't change in $$W$$, implying non-convexity. For 2, we rely on the notion of a "certificate of optimality"; that is, we check that at every local minimum, $$0 = X(X^TW^T-Y^T)$$, implying the local optimum is global. 3 follows naturally from 2, and 4 is somewhat technical. For the full proofs, refer to the original paper [2]. 
