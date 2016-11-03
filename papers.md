@@ -60,9 +60,9 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 
 - Chi, Jin et al. “Local Maxima in the Likelihood of Gaussian Mixture Models: Structural Results and Algorithmic Consequences.” _arXiv preprint arXiv:1609.00978_ (2016) [link](https://arxiv.org/pdf/1609.00978v1)
 
-- Kawaguchi, Kenji. "Deep Learning without Poor Local Minima." _arXiv preprint arXiv:1605.07110_ (2016). [link](http://arxiv.org/abs/1605.07110)
+- ~~Kawaguchi, Kenji. "Deep Learning without Poor Local Minima." _arXiv preprint arXiv:1605.07110_ (2016). [link](http://arxiv.org/abs/1605.07110)~~
 
-- Mei, Song, Yu Bai, and Andrea Montanari. "The Landscape of Empirical Risk for Non-convex Losses." arXiv preprint arXiv:1607.06534 (2016). [link](https://arxiv.org/pdf/1607.06534)
+- ~~Mei, Song, Yu Bai, and Andrea Montanari. "The Landscape of Empirical Risk for Non-convex Losses." arXiv preprint arXiv:1607.06534 (2016). [link](https://arxiv.org/pdf/1607.06534)~~
 
 ## Deep Learning
 - ~~Goodfellow, Ian, et al. "Generative adversarial nets." _Neural Information Processing Systems (NIPS)_ (2014). [link](http://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf)~~
@@ -96,7 +96,7 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 
 - ~~Xu, Kelvin, et al. "Show, attend and tell: Neural image caption generation with visual attention." _arXiv preprint arXiv:1502.03044 2.3_ (2015): 5. [link](http://www.jmlr.org/proceedings/papers/v37/xuc15.pdf)~~
 
-- Eslami, S. M., et al. "Attend, Infer, Repeat: Fast Scene Understanding with Generative Models." _arXiv preprint arXiv:1603.08575_ (2016). [link](http://arxiv.org/pdf/1603.08575.pdf)
+- ~~Eslami, S. M., et al. "Attend, Infer, Repeat: Fast Scene Understanding with Generative Models." _arXiv preprint arXiv:1603.08575_ (2016). [link](http://arxiv.org/pdf/1603.08575.pdf)~~
 
 - Makhzani, Alireza, et al. "Adversarial autoencoders." _arXiv preprint arXiv:1511.05644_ (2015). [link](http://arxiv.org/pdf/1511.05644)
 
