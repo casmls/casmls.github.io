@@ -47,6 +47,10 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 
 - Giles, Mike, et al. "Multilevel Monte Carlo for Scalable Bayesian Computations." arXiv preprint arXiv:1609.06144 (2016). [link](https://arxiv.org/pdf/1609.06144)
 
+- Jang, Eric et al. "Categorical Reparameterization with Gumbel-softmax." (2016) [link](http://openreview.net/pdf?id=rkE3y85ee)
+
+- Maddison, Chris J et al. The concrete distribution: a continuous relaxation of discrete random variables." (2016) [link](http://openreview.net/pdf?id=S1jE5L5gl)
+
 ## Theory
 - Hardt, Moritz, Tengyu Ma, and Benjamin Recht. "Gradient Descent Learns Linear Dynamical Systems." arXiv preprint arXiv:1609.05191 (2016). [link](https://arxiv.org/pdf/1609.05191)
 
