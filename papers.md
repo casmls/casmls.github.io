@@ -60,7 +60,7 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 
 - Wibisono, Andre, Ashia C. Wilson, and Michael I. Jordan. "A Variational Perspective on Accelerated Methods in Optimization." _arXiv preprint arXiv:1603.04245_ (2016). [link](http://arxiv.org/pdf/1603.04245)
 
-- Advani, Madhu, and Surya Ganguli. "Statistical Mechanics of Optimal Convex Inference in High Dimensions." Physical Review X 6.3_ (2016): 031034. [link](http://link.aps.org/pdf/10.1103/PhysRevX.6.031034)
+- ~~Advani, Madhu, and Surya Ganguli. "Statistical Mechanics of Optimal Convex Inference in High Dimensions." Physical Review X 6.3_ (2016): 031034. [link](http://link.aps.org/pdf/10.1103/PhysRevX.6.031034)~~
 
 - Chi, Jin et al. “Local Maxima in the Likelihood of Gaussian Mixture Models: Structural Results and Algorithmic Consequences.” _arXiv preprint arXiv:1609.00978_ (2016) [link](https://arxiv.org/pdf/1609.00978v1)
 
