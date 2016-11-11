@@ -79,9 +79,9 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 
 - He, Kaiming, et al. "Deep residual learning for image recognition." _arXiv preprint arXiv:1512.03385_ (2015). [link](http://arxiv.org/pdf/1512.03385)
 
-- Huang, Gao, et al. "Deep networks with stochastic depth." _arXiv preprint arXiv:1603.09382_ (2016). [link](http://arxiv.org/abs/1603.09382)
+- ~~Huang, Gao, et al. "Deep networks with stochastic depth." _arXiv preprint arXiv:1603.09382_ (2016). [link](http://arxiv.org/abs/1603.09382)~~
 
-- Gal, Yarin, and Zoubin Ghahramani. "Dropout as a Bayesian approximation: Representing model uncertainty in deep learning." _arXiv preprint arXiv:1506.02142_ (2015). [link](http://arxiv.org/pdf/1506.02142)
+- ~~Gal, Yarin, and Zoubin Ghahramani. "Dropout as a Bayesian approximation: Representing model uncertainty in deep learning." _arXiv preprint arXiv:1506.02142_ (2015). [link](http://arxiv.org/pdf/1506.02142)~~
 
 - Rezende, Danilo Jimenez, et al. "One-Shot Generalization in Deep Generative Models." _arXiv preprint arXiv:1603.05106_ (2016). [link](http://arxiv.org/pdf/1603.05106)
 
