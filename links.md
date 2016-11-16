@@ -16,4 +16,4 @@ Check out these other great blogs and resources!
 - [Alex Smola's Blog](http://blog.smola.org/)
 - [Radford Neal's Blog](https://radfordneal.wordpress.com/)
 - [Hal Daume III's NLP Blog](http://nlpers.blogspot.com/)
-
+- [inFERENCe](http://www.inference.vc/)
