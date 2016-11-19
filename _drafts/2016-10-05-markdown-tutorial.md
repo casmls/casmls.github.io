@@ -2,7 +2,7 @@
 layout: post
 title: "Markdown Tutorial"
 categories: general
-author: Gamaleldin Elsayed
+author: scott linderman
 excerpt_separator: <!--more-->
 comments: true
 ---
