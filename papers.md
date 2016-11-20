@@ -144,9 +144,9 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Schein, Aaron et al, “Gamma Poisson Dynamical Systems.” To appear in NIPS, 2016.
 
 ## Density Estimation
-- Uria, Benigno, et al. "Neural Autoregressive Distribution Estimation." _arXiv preprint arXiv:1605.02226_ (2016). [link](http://arxiv.org/pdf/1605.02226)
+- ~~Uria, Benigno, et al. "Neural Autoregressive Distribution Estimation." _arXiv preprint arXiv:1605.02226_ (2016). [link](http://arxiv.org/pdf/1605.02226)~~
 
-- Germain, Mathieu, et al. "MADE: masked autoencoder for distribution estimation." International Conference on Machine Learning. 2015. [link](http://www.jmlr.org/proceedings/papers/v37/germain15.pdf)
+- ~~Germain, Mathieu, et al. "MADE: masked autoencoder for distribution estimation." International Conference on Machine Learning. 2015. [link](http://www.jmlr.org/proceedings/papers/v37/germain15.pdf)~~
 
 - Tabak, E. G., and Cristina V. Turner. "A family of nonparametric density estimation algorithms." Communications on Pure and Applied Mathematics (2013): 145-164. [link](http://www.fis.uncor.edu/~turner/Trabajos/RevisedTT-ultimaversionTabak-turner.pdf)
 
