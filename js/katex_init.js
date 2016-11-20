@@ -16,7 +16,7 @@ Array.prototype.forEach.call(elements, function(element) {
        katexElement.className += "math-inline";
      }
 
-     katex.render(textToRender, katexElement);
+      katex.render(textToRender, katexElement, {throwOnError: false, errorColor: '#ff0000'});
      element.parentNode.insertBefore(katexElement, element);
   }
 });
