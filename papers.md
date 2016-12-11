@@ -33,7 +33,7 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 
 - Kucukelbir, Alp, et al. "Automatic Differentiation Variational Inference." _arXiv preprint arXiv:1603.00788_ (2016). [link](http://arxiv.org/pdf/1603.00788v1.pdf)
 
-- Johnson, Matthew J., et al. "Composing graphical models with neural networks for structured representations and fast inference." _arXiv preprint arXiv:1603.06277_ (2016). [link](http://arxiv.org/pdf/1603.06277)
+- ~~Johnson, Matthew J., et al. "Composing graphical models with neural networks for structured representations and fast inference." _arXiv preprint arXiv:1603.06277_ (2016). [link](http://arxiv.org/pdf/1603.06277)~~
 
 - Duvenaud, David, Dougal Maclaurin, and Ryan P. Adams. "Early Stopping as Nonparametric Variational Inference." _AISTATS_ (2016). [link](http://www.jmlr.org/proceedings/papers/v51/duvenaud16.pdf)
 
@@ -125,7 +125,7 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Gatys, Leon A., Alexander S. Ecker, and Matthias Bethge. "A neural algorithm of artistic style." _arXiv preprint arXiv:1508.06576_ (2015). [link](http://arxiv.org/pdf/1508.06576)
 
 ## State Space Models
-- Gao, Yuanjun, et al. "Linear dynamical neural population models through nonlinear embeddings." _arXiv preprint arXiv:1605.08454_ (2016). [link](http://arxiv.org/pdf/1605.08454)
+- ~~Gao, Yuanjun, et al. "Linear dynamical neural population models through nonlinear embeddings." _arXiv preprint arXiv:1605.08454_ (2016). [link](http://arxiv.org/pdf/1605.08454)~~
 
 - Ross, Stéphane, Geoffrey J. Gordon, and Drew Bagnell. "A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning." _AISTATS_ (2011). [link](http://www.jmlr.org/proceedings/papers/v15/ross11a/ross11a.pdf)
 
@@ -133,7 +133,7 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 
 - Sussillo, David, et al. "LFADS-Latent Factor Analysis via Dynamical Systems." _arXiv preprint arXiv:1608.06315_ (2016). [link](http://arxiv.org/pdf/1608.06315)
 
-- Krishnan, Rahul G., Uri Shalit, and David Sontag. "Deep Kalman Filters."_arXiv preprint arXiv:1511.05121_ (2015). [link](http://arxiv.org/pdf/1511.05121)
+- ~~Krishnan, Rahul G., Uri Shalit, and David Sontag. "Deep Kalman Filters."_arXiv preprint arXiv:1511.05121_ (2015). [link](http://arxiv.org/pdf/1511.05121)~~
 
 - Bastani, Vahid et al. “Incremental Nonlinear System Identification and Adaptive Particle Filtering Using Gaussian Process.” _arXiv preprint arXiv:1608.08362_ (2016) [link](https://arxiv.org/pdf/1608.08362v1)
 
