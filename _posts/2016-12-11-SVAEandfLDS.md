@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Augmenting variational inference frameworks with latent variables"
+title: "Variational Autoencoders with Structured Latent Variable Models"
 categories: general
 author: Andrew Davison
 excerpt_separator: <!--more-->
