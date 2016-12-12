@@ -11,7 +11,7 @@ This week we read and discussed two papers: a paper by Johnson et al. [1] titled
 with neural networks for structured representations and fast inference" and a paper by Gao et al. [2] titled
 "Linear dynamical neural population models through nonlinear embeddings." Although the two papers have different
 focuses &mdash; the former proposes a general modeling and inference framework, whereas the latter focuses in particular on 
-modeling neural activity &mdash; they are similar in that both use latent variables as part of a variational autoencoder framework
+modeling neural activity &mdash; they are similar in that both use structured latent variable models as part of a variational autoencoder framework
 in order to perform inference. The benefit to this type of approach is that it allows for an increase in the flexibility of 
 the models we can consider while retaining interpretability, even in high dimensions.
 
