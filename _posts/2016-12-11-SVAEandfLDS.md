@@ -88,7 +88,7 @@ $$
 one can show that the corresponding factor $$q^*(x)$$ is given by
 
 $$
-q^*(x) \propto \exp \mathbb{E}_{q(\theta)}\left[ \log p(\theta) p(x | \theta) \exp \phi \right] \propto \exp \left( \langle \eta^*_x(\eta_{\theta}, \phi), t_x(x) \rangle \right).
+q^*(x) \propto \exp \mathbb{E}_{q(\theta)}\left[ \log p(\theta) p(x | \theta) \exp \psi \right] \propto \exp \left( \langle \eta^*_x(\eta_{\theta}, \phi), t_x(x) \rangle \right).
 $$
 
 Although $$q^*(x)$$ is suboptimal for $$\mathcal{L}$$, this factor is at least tractable to compute.
@@ -165,7 +165,7 @@ z_{r1} \sim \mathcal{N}(\mu_1, Q_1),
 $$
 
 $$
-z_{r(t+1)} \sim \mathcal{N}(A z_{rt}, Q)
+z_{r(t+1)} \mid z_{rt} \sim \mathcal{N}(A z_{rt}, Q)
 $$
 
 where $$A \in \mathbb{R}^{m \times m}$$, and $$Q_1, Q$$ are covariance matrices. In fLDS, the observation model is given by
@@ -187,7 +187,7 @@ across units and layers. The aim is to then learn all the generative model param
 Due to the noise model and the non-linear observation model, the posterior $$p_{\theta}(z | x)$$ is intractable and so the authors 
 employ a stochastic variational inference approach. The posterior is then approximated by a tractable distribution $$q_{\phi}(z | x)$$
 depending on parameters $$\phi$$ and the corresponding evidence lower bound $$\mathcal{L}$$ (ELBO) is maximized; here, an auto-encoding variational Bayes
-approach is used to estimate $$\delta \mathcal{L}$$. Given these, the ELBO is then maximized via stochastic gradient ascent.
+approach is used to estimate $$\nabla \mathcal{L}$$. Given these, the ELBO is then maximized via stochastic gradient ascent.
 
 This approach ends up being similar to that of the first paper, when considering the choice of approximate posterior distributions used. Here,
 a Gaussian approximation is used:
