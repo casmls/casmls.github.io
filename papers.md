@@ -34,6 +34,7 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 
 ## Deep Learning
 
+- Graves, Alex, et al. "Hybrid computing using a neural network with dynamic external memory." Nature 538.7626 (2016): 471-476. [link](http://www.nature.com/nature/journal/v538/n7626/full/nature20101.html)
 - Chung, Junyoung, et al. "A recurrent latent variable model for sequential data." Advances in neural information processing systems. 2015. [link](https://arxiv.org/pdf/1506.02216.pdf)
 - Burda, Yuri, Roger Grosse, and Ruslan Salakhutdinov. "Importance weighted autoencoders." _arXiv preprint arXiv:1509.00519_ (2015). [link](http://arxiv.org/pdf/1509.00519)
 - He, Kaiming, et al. "Deep residual learning for image recognition." _arXiv preprint arXiv:1512.03385_ (2015). [link](http://arxiv.org/pdf/1512.03385)
@@ -52,16 +53,20 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Nalisnick, Eric, and Padhraic Smyth. "Deep Generative Models with Stick-Breaking Priors." _arXiv preprint arXiv:1605.06197_ (2016). [link](http://arxiv.org/pdf/1605.06197)
 - Kulkarni, Tejas D., et al. "Deep convolutional inverse graphics network." _Neural Information Processing Systems (NIPS)_ (2015). [link](http://papers.nips.cc/paper/5851-deep-convolutional-inverse-graphics-network.pdf)
 - Gatys, Leon A., Alexander S. Ecker, and Matthias Bethge. "A neural algorithm of artistic style." _arXiv preprint arXiv:1508.06576_ (2015). [link](http://arxiv.org/pdf/1508.06576)
+- Huszár, Ferenc. "How (not) to Train your Generative Model: Scheduled Sampling, Likelihood, Adversary?." arXiv preprint arXiv:1511.05101 (2015). [link](https://arxiv.org/pdf/1511.05101.pdf)
 
 ## State Space Models
+- Foerster, Jakob N., et al. "Intelligible language modeling with input switched affine networks." arXiv preprint arXiv:1611.09434 (2016). [link](https://arxiv.org/pdf/1611.09434)
+- Fraccaro, Marco, et al. "Sequential Neural Models with Stochastic Layers." _Advances in Neural Information Processing Systems_ (2016). [link](https://papers.nips.cc/paper/6039-sequential-neural-models-with-stochastic-layers.pdf)
+- Chung, Junyoung, et al. "A recurrent latent variable model for sequential data." _Advances in neural information processing systems_. 2015. [link](http://papers.nips.cc/paper/5653-joint-training-of-a-convolutional-network-and-a-graphical-model-for-human-pose-estimation.pdf)
+- Schein, Aaron, Hanna Wallach, and Mingyuan Zhou. "Poisson-Gamma dynamical systems." _Advances in Neural Information Processing Systems_ (2016). [link](http://papers.nips.cc/paper/6083-poisson-gamma-dynamical-systems.pdf)
+- Winner, Kevin, and Daniel R. Sheldon. "Probabilistic Inference with Generating Functions for Poisson Latent Variable Models." _Advances in Neural Information Processing Systems_ (2016). [link](http://papers.nips.cc/paper/6587-probabilistic-inference-with-generating-functions-for-poisson-latent-variable-models.pdf)
 - Ross, Stéphane, Geoffrey J. Gordon, and Drew Bagnell. "A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning." _AISTATS_ (2011). [link](http://www.jmlr.org/proceedings/papers/v15/ross11a/ross11a.pdf)
 - Sun, Wen, et al. "Learning to filter with predictive state inference machines."_arXiv preprint arXiv:1512.08836_ (2015). [link](http://arxiv.org/pdf/1512.08836)
 - Sussillo, David, et al. "LFADS-Latent Factor Analysis via Dynamical Systems." _arXiv preprint arXiv:1608.06315_ (2016). [link](http://arxiv.org/pdf/1608.06315)
 - Bastani, Vahid et al. “Incremental Nonlinear System Identification and Adaptive Particle Filtering Using Gaussian Process.” _arXiv preprint arXiv:1608.08362_ (2016) [link](https://arxiv.org/pdf/1608.08362v1)
 - Shestopaloff, Alexander Y., and Radford M. Neal. "MCMC for non-linear state space models using ensembles of latent sequences." _arXiv preprint arXiv:1305.0320_ (2013). [link](http://arxiv.org/pdf/1305.0320.pdf)
 - Kandasamy, Kirthevasan, Maruan Al-Shedivat, and Eric Xing. “Learning HMMs with Nonparametric Emissions via Spectral Decompositions of Continuous Matrices” _arXiv preprint arXiv:1609.06390_ (2016) [link](https://arxiv.org/pdf/1609.06390v1)
-- Schein, Aaron, Hanna Wallach, and Mingyuan Zhou. "Poisson-Gamma dynamical systems." _Advances in Neural Information Processing Systems_ (2016). [link](http://papers.nips.cc/paper/6083-poisson-gamma-dynamical-systems.pdf)
-- Winner, Kevin, and Daniel R. Sheldon. "Probabilistic Inference with Generating Functions for Poisson Latent Variable Models." _Advances in Neural Information Processing Systems_ (2016). [link](http://papers.nips.cc/paper/6587-probabilistic-inference-with-generating-functions-for-poisson-latent-variable-models.pdf)
 
 ## Density Estimation
 - Tabak, E. G., and Cristina V. Turner. "A family of nonparametric density estimation algorithms." Communications on Pure and Applied Mathematics (2013): 145-164. [link](http://www.fis.uncor.edu/~turner/Trabajos/RevisedTT-ultimaversionTabak-turner.pdf)
@@ -70,6 +75,7 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 
 ## Statistical Neuroscience
 - Marblestone, Adam, Greg Wayne, and Konrad Kording. "Towards an integration of deep learning and neuroscience." _arXiv preprint arXiv:1606.03813_ (2016). [link](http://arxiv.org/pdf/1606.03813.pdf)
+- Gershman, Samuel J., Eric J. Horvitz, and Joshua B. Tenenbaum. "Computational rationality: A converging paradigm for intelligence in brains, minds, and machines." Science 349.6245 (2015): 273-278. [link](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.720.2764&rep=rep1&type=pdf)
 
 ## Previously Discussed in CAMLS
 - Rezende, Danilo Jimenez, and Shakir Mohamed. "Variational inference with normalizing flows." _arXiv preprint arXiv:1505.05770_ (2015). [link](http://arxiv.org/pdf/1505.05770)
