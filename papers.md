@@ -25,7 +25,7 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Maddison, Chris J et al. "The concrete distribution: a continuous relaxation of discrete random variables." (2016) [link](http://openreview.net/pdf?id=S1jE5L5gl)
 - Kusner, Matt J. and José Miguel Hernández-Lobato. "GANs for Sequences of Discrete Elements with the Gumbel-softmax Distribution." (2016) [link](https://arxiv.org/abs/1611.04051)
 - Lopez-Paz, David, and Maxime Oquab. "Revisiting Classifier Two-Sample Tests." arXiv preprint arXiv:1610.06545 (2016). [link](https://arxiv.org/pdf/1610.06545)
-
+- He, Niao, et al. "Fast and Simple Optimization for Poisson Likelihood Models." arXiv preprint arXiv:1608.01264 (2016). [link](https://arxiv.org/pdf/1608.01264)
 ## Theory
 - Kakade, Sham, et al. "Prediction with a Short Memory." arXiv preprint arXiv:1612.02526 (2016). [link](https://arxiv.org/pdf/1612.02526)
 - Hardt, Moritz, Tengyu Ma, and Benjamin Recht. "Gradient Descent Learns Linear Dynamical Systems." arXiv preprint arXiv:1609.05191 (2016). [link](https://arxiv.org/pdf/1609.05191)
@@ -33,9 +33,11 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Chen, Yudong, and Martin J. Wainwright. "Fast low-rank estimation by projected gradient descent: General statistical and algorithmic guarantees."_arXiv preprint arXiv:1509.03025_ (2015). [link](http://arxiv.org/pdf/1509.03025)
 - Wibisono, Andre, Ashia C. Wilson, and Michael I. Jordan. "A Variational Perspective on Accelerated Methods in Optimization." _arXiv preprint arXiv:1603.04245_ (2016). [link](http://arxiv.org/pdf/1603.04245)
 - Chi, Jin et al. “Local Maxima in the Likelihood of Gaussian Mixture Models: Structural Results and Algorithmic Consequences.” _arXiv preprint arXiv:1609.00978_ (2016) [link](https://arxiv.org/pdf/1609.00978v1)
+- Bloem-Reddy, Benjamin, and Peter Orbanz. "Random Walk Models of Network Formation and Sequential Monte Carlo Methods for Graphs." arXiv preprint arXiv:1612.06404 (2016). [link](https://arxiv.org/pdf/1612.06404)
 
 ## Deep Learning
-
+- Metz, Luke, et al. "Unrolled Generative Adversarial Networks." arXiv preprint arXiv:1611.02163 (2016). [link](https://arxiv.org/pdf/1611.02163)
+- Radford, Alec, Luke Metz, and Soumith Chintala. "Unsupervised representation learning with deep convolutional generative adversarial networks." arXiv preprint arXiv:1511.06434 (2015). [link](http://arxiv.org/pdf/1511.06434)
 - Graves, Alex, et al. "Hybrid computing using a neural network with dynamic external memory." Nature 538.7626 (2016): 471-476. [link](http://www.nature.com/nature/journal/v538/n7626/full/nature20101.html)
 - Chung, Junyoung, et al. "A recurrent latent variable model for sequential data." Advances in neural information processing systems. 2015. [link](https://arxiv.org/pdf/1506.02216.pdf)
 - Burda, Yuri, Roger Grosse, and Ruslan Salakhutdinov. "Importance weighted autoencoders." _arXiv preprint arXiv:1509.00519_ (2015). [link](http://arxiv.org/pdf/1509.00519)
@@ -56,6 +58,8 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Kulkarni, Tejas D., et al. "Deep convolutional inverse graphics network." _Neural Information Processing Systems (NIPS)_ (2015). [link](http://papers.nips.cc/paper/5851-deep-convolutional-inverse-graphics-network.pdf)
 - Gatys, Leon A., Alexander S. Ecker, and Matthias Bethge. "A neural algorithm of artistic style." _arXiv preprint arXiv:1508.06576_ (2015). [link](http://arxiv.org/pdf/1508.06576)
 - Huszár, Ferenc. "How (not) to Train your Generative Model: Scheduled Sampling, Likelihood, Adversary?." arXiv preprint arXiv:1511.05101 (2015). [link](https://arxiv.org/pdf/1511.05101.pdf)
+- Alain, Guillaume, and Yoshua Bengio. "Understanding intermediate layers using linear classifier probes." arXiv preprint arXiv:1610.01644 (2016). [link](https://arxiv.org/pdf/1610.01644)
+- Chen, Yutian, et al. "Learning to Learn for Global Optimization of Black Box Functions." arXiv preprint arXiv:1611.03824 (2016). [link](https://arxiv.org/pdf/1611.03824)
 
 ## State Space Models
 - Foerster, Jakob N., et al. "Intelligible language modeling with input switched affine networks." arXiv preprint arXiv:1611.09434 (2016). [link](https://arxiv.org/pdf/1611.09434)
@@ -74,6 +78,12 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Tabak, E. G., and Cristina V. Turner. "A family of nonparametric density estimation algorithms." Communications on Pure and Applied Mathematics (2013): 145-164. [link](http://www.fis.uncor.edu/~turner/Trabajos/RevisedTT-ultimaversionTabak-turner.pdf)
 - van den Oord, Aaron, Nal Kalchbrenner, and Koray Kavukcuoglu. "Pixel Recurrent Neural Networks." _arXiv preprint arXiv:1601.06759_ (2016). [link](http://arxiv.org/pdf/1601.06759)
 - Dinh, Laurent, Jascha Sohl-Dickstein, and Samy Bengio. "Density estimation using Real NVP." _arXiv preprint arXiv:1605.08803_ (2016). [link](http://arxiv.org/pdf/1605.08803)
+
+## Reinforcement Learning
+- Levine, Sergey, et al. "End-to-end training of deep visuomotor policies." Journal of Machine Learning Research 17.39 (2016): 1-40. [link](http://www.jmlr.org/papers/volume17/15-522/15-522.pdf)
+- Tamar, Aviv, Sergey Levine, and Pieter Abbeel. "Value Iteration Networks." NIPS (2016). [link](http://arxiv.org/pdf/1602.02867)
+- Finn, Chelsea, Ian Goodfellow, and Sergey Levine. "Unsupervised Learning for Physical Interaction through Video Prediction." arXiv preprint arXiv:1605.07157 (2016). [link](http://arxiv.org/pdf/1605.07157)
+- Agarwal, Alekh, et al. "Corralling a Band of Bandit Algorithms." arXiv preprint arXiv:1612.06246 (2016). [link](https://arxiv.org/pdf/1612.06246)
 
 ## Statistical Neuroscience
 - Marblestone, Adam, Greg Wayne, and Konrad Kording. "Towards an integration of deep learning and neuroscience." _arXiv preprint arXiv:1606.03813_ (2016). [link](http://arxiv.org/pdf/1606.03813.pdf)
