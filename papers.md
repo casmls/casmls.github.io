@@ -26,6 +26,7 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Kusner, Matt J. and José Miguel Hernández-Lobato. "GANs for Sequences of Discrete Elements with the Gumbel-softmax Distribution." (2016) [link](https://arxiv.org/abs/1611.04051)
 - Lopez-Paz, David, and Maxime Oquab. "Revisiting Classifier Two-Sample Tests." arXiv preprint arXiv:1610.06545 (2016). [link](https://arxiv.org/pdf/1610.06545)
 - He, Niao, et al. "Fast and Simple Optimization for Poisson Likelihood Models." arXiv preprint arXiv:1608.01264 (2016). [link](https://arxiv.org/pdf/1608.01264)
+
 ## Theory
 - Kakade, Sham, et al. "Prediction with a Short Memory." arXiv preprint arXiv:1612.02526 (2016). [link](https://arxiv.org/pdf/1612.02526)
 - Hardt, Moritz, Tengyu Ma, and Benjamin Recht. "Gradient Descent Learns Linear Dynamical Systems." arXiv preprint arXiv:1609.05191 (2016). [link](https://arxiv.org/pdf/1609.05191)
@@ -34,6 +35,8 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Wibisono, Andre, Ashia C. Wilson, and Michael I. Jordan. "A Variational Perspective on Accelerated Methods in Optimization." _arXiv preprint arXiv:1603.04245_ (2016). [link](http://arxiv.org/pdf/1603.04245)
 - Chi, Jin et al. “Local Maxima in the Likelihood of Gaussian Mixture Models: Structural Results and Algorithmic Consequences.” _arXiv preprint arXiv:1609.00978_ (2016) [link](https://arxiv.org/pdf/1609.00978v1)
 - Bloem-Reddy, Benjamin, and Peter Orbanz. "Random Walk Models of Network Formation and Sequential Monte Carlo Methods for Graphs." arXiv preprint arXiv:1612.06404 (2016). [link](https://arxiv.org/pdf/1612.06404)
+- Huszár, Ferenc. "How (not) to Train your Generative Model: Scheduled Sampling, Likelihood, Adversary?." arXiv preprint arXiv:1511.05101 (2015). [link](https://arxiv.org/pdf/1511.05101.pdf)
+- Mohamed, Shakir, and Balaji Lakshminarayanan. "Learning in Implicit Generative Models." arXiv preprint arXiv:1610.03483 (2016). [link](https://arxiv.org/pdf/1610.03483)
 
 ## Deep Learning
 - Metz, Luke, et al. "Unrolled Generative Adversarial Networks." arXiv preprint arXiv:1611.02163 (2016). [link](https://arxiv.org/pdf/1611.02163)
@@ -57,7 +60,6 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Nalisnick, Eric, and Padhraic Smyth. "Deep Generative Models with Stick-Breaking Priors." _arXiv preprint arXiv:1605.06197_ (2016). [link](http://arxiv.org/pdf/1605.06197)
 - Kulkarni, Tejas D., et al. "Deep convolutional inverse graphics network." _Neural Information Processing Systems (NIPS)_ (2015). [link](http://papers.nips.cc/paper/5851-deep-convolutional-inverse-graphics-network.pdf)
 - Gatys, Leon A., Alexander S. Ecker, and Matthias Bethge. "A neural algorithm of artistic style." _arXiv preprint arXiv:1508.06576_ (2015). [link](http://arxiv.org/pdf/1508.06576)
-- Huszár, Ferenc. "How (not) to Train your Generative Model: Scheduled Sampling, Likelihood, Adversary?." arXiv preprint arXiv:1511.05101 (2015). [link](https://arxiv.org/pdf/1511.05101.pdf)
 - Alain, Guillaume, and Yoshua Bengio. "Understanding intermediate layers using linear classifier probes." arXiv preprint arXiv:1610.01644 (2016). [link](https://arxiv.org/pdf/1610.01644)
 - Chen, Yutian, et al. "Learning to Learn for Global Optimization of Black Box Functions." arXiv preprint arXiv:1611.03824 (2016). [link](https://arxiv.org/pdf/1611.03824)
 
