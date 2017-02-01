@@ -33,7 +33,7 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 
 - Kucukelbir, Alp, et al. "Automatic Differentiation Variational Inference." _arXiv preprint arXiv:1603.00788_ (2016). [link](http://arxiv.org/pdf/1603.00788v1.pdf)
 
-- Johnson, Matthew J., et al. "Composing graphical models with neural networks for structured representations and fast inference." _arXiv preprint arXiv:1603.06277_ (2016). [link](http://arxiv.org/pdf/1603.06277)
+- ~~Johnson, Matthew J., et al. "Composing graphical models with neural networks for structured representations and fast inference." _arXiv preprint arXiv:1603.06277_ (2016). [link](http://arxiv.org/pdf/1603.06277)~~
 
 - Duvenaud, David, Dougal Maclaurin, and Ryan P. Adams. "Early Stopping as Nonparametric Variational Inference." _AISTATS_ (2016). [link](http://www.jmlr.org/proceedings/papers/v51/duvenaud16.pdf)
 
@@ -43,20 +43,34 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 
 - Pakman, Ari, et al. "Stochastic Bouncy Particle Sampler." _arXiv preprint arXiv:1609.00770_ (2016). [link](http://arxiv.org/abs/1609.00770)
 
-- Polloc, Murray et al. “The Scalable Langevin Exact Algorithm: Bayesian Inference for Big Data” _arXiv preprint arXiv:1609.03436_ (2016). [link](https://arxiv.org/abs/1609.03436)
+- ~~Polloc, Murray et al. “The Scalable Langevin Exact Algorithm: Bayesian Inference for Big Data” _arXiv preprint arXiv:1609.03436_ (2016). [link](https://arxiv.org/abs/1609.03436)~~
+
+- Giles, Mike, et al. "Multilevel Monte Carlo for Scalable Bayesian Computations." arXiv preprint arXiv:1609.06144 (2016). [link](https://arxiv.org/pdf/1609.06144)
+
+## Discrete reparameterization with Gumbel-softmax
+
+- Jang, Eric et al. "Categorical Reparameterization with Gumbel-softmax." (2016) [link](http://openreview.net/pdf?id=rkE3y85ee)
+
+- Maddison, Chris J et al. "The concrete distribution: a continuous relaxation of discrete random variables." (2016) [link](http://openreview.net/pdf?id=S1jE5L5gl)
+
+- Kusner, Matt J. and José Miguel Hernández-Lobato. "GANs for Sequences of Discrete Elements with the Gumbel-softmax Distribution." (2016) [link](https://arxiv.org/abs/1611.04051) 
 
 ## Theory
+- Hardt, Moritz, Tengyu Ma, and Benjamin Recht. "Gradient Descent Learns Linear Dynamical Systems." arXiv preprint arXiv:1609.05191 (2016). [link](https://arxiv.org/pdf/1609.05191)
+
 - Yang, Fanny, Sivaraman Balakrishnan, and Martin J. Wainwright. "Statistical and computational guarantees for the Baum-Welch algorithm."  _53rd Annual Allerton Conference on Communication, Control, and Computing._ IEEE (2015). [link](http://arxiv.org/pdf/1512.08269)
 
 - Chen, Yudong, and Martin J. Wainwright. "Fast low-rank estimation by projected gradient descent: General statistical and algorithmic guarantees."_arXiv preprint arXiv:1509.03025_ (2015). [link](http://arxiv.org/pdf/1509.03025)
 
 - Wibisono, Andre, Ashia C. Wilson, and Michael I. Jordan. "A Variational Perspective on Accelerated Methods in Optimization." _arXiv preprint arXiv:1603.04245_ (2016). [link](http://arxiv.org/pdf/1603.04245)
 
-- Advani, Madhu, and Surya Ganguli. "Statistical Mechanics of Optimal Convex Inference in High Dimensions." Physical Review X 6.3_ (2016): 031034. [link](http://link.aps.org/pdf/10.1103/PhysRevX.6.031034)
+- ~~Advani, Madhu, and Surya Ganguli. "Statistical Mechanics of Optimal Convex Inference in High Dimensions." Physical Review X 6.3_ (2016): 031034. [link](http://link.aps.org/pdf/10.1103/PhysRevX.6.031034)~~
 
 - Chi, Jin et al. “Local Maxima in the Likelihood of Gaussian Mixture Models: Structural Results and Algorithmic Consequences.” _arXiv preprint arXiv:1609.00978_ (2016) [link](https://arxiv.org/pdf/1609.00978v1)
 
-- Kawaguchi, Kenji. "Deep Learning without Poor Local Minima." _arXiv preprint arXiv:1605.07110_ (2016). [link](http://arxiv.org/abs/1605.07110)
+- ~~Kawaguchi, Kenji. "Deep Learning without Poor Local Minima." _arXiv preprint arXiv:1605.07110_ (2016). [link](http://arxiv.org/abs/1605.07110)~~
+
+- ~~Mei, Song, Yu Bai, and Andrea Montanari. "The Landscape of Empirical Risk for Non-convex Losses." arXiv preprint arXiv:1607.06534 (2016). [link](https://arxiv.org/pdf/1607.06534)~~
 
 ## Deep Learning
 - ~~Goodfellow, Ian, et al. "Generative adversarial nets." _Neural Information Processing Systems (NIPS)_ (2014). [link](http://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf)~~
@@ -69,9 +83,9 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 
 - He, Kaiming, et al. "Deep residual learning for image recognition." _arXiv preprint arXiv:1512.03385_ (2015). [link](http://arxiv.org/pdf/1512.03385)
 
-- Huang, Gao, et al. "Deep networks with stochastic depth." _arXiv preprint arXiv:1603.09382_ (2016). [link](http://arxiv.org/abs/1603.09382)
+- ~~Huang, Gao, et al. "Deep networks with stochastic depth." _arXiv preprint arXiv:1603.09382_ (2016). [link](http://arxiv.org/abs/1603.09382)~~
 
-- Gal, Yarin, and Zoubin Ghahramani. "Dropout as a Bayesian approximation: Representing model uncertainty in deep learning." _arXiv preprint arXiv:1506.02142_ (2015). [link](http://arxiv.org/pdf/1506.02142)
+- ~~Gal, Yarin, and Zoubin Ghahramani. "Dropout as a Bayesian approximation: Representing model uncertainty in deep learning." _arXiv preprint arXiv:1506.02142_ (2015). [link](http://arxiv.org/pdf/1506.02142)~~
 
 - Rezende, Danilo Jimenez, et al. "One-Shot Generalization in Deep Generative Models." _arXiv preprint arXiv:1603.05106_ (2016). [link](http://arxiv.org/pdf/1603.05106)
 
@@ -84,13 +98,13 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Maaløe, Lars, et al. "Auxiliary Deep Generative Models." _arXiv preprint arXiv:1602.05473_ (2016). [link](http://arxiv.org/pdf/1602.05473.pdf)
 
 
-- Gregor, Karol, et al. "DRAW: A recurrent neural network for image generation." _arXiv preprint arXiv:1502.04623_ (2015). [link](http://arxiv.org/pdf/1502.04623.pdf)
+- ~~Gregor, Karol, et al. "DRAW: A recurrent neural network for image generation." _arXiv preprint arXiv:1502.04623_ (2015). [link](http://arxiv.org/pdf/1502.04623.pdf)~~
 
 - Mnih, Volodymyr, Nicolas Heess, and Alex Graves. "Recurrent models of visual attention." Advances in Neural Information Processing Systems. 2014. [link](http://papers.nips.cc/paper/5542-recurrent-models-of-visual-attention.pdf)
 
-- Xu, Kelvin, et al. "Show, attend and tell: Neural image caption generation with visual attention." _arXiv preprint arXiv:1502.03044 2.3_ (2015): 5. [link](http://www.jmlr.org/proceedings/papers/v37/xuc15.pdf)
+- ~~Xu, Kelvin, et al. "Show, attend and tell: Neural image caption generation with visual attention." _arXiv preprint arXiv:1502.03044 2.3_ (2015): 5. [link](http://www.jmlr.org/proceedings/papers/v37/xuc15.pdf)~~
 
-- Eslami, S. M., et al. "Attend, Infer, Repeat: Fast Scene Understanding with Generative Models." _arXiv preprint arXiv:1603.08575_ (2016). [link](http://arxiv.org/pdf/1603.08575.pdf)
+- ~~Eslami, S. M., et al. "Attend, Infer, Repeat: Fast Scene Understanding with Generative Models." _arXiv preprint arXiv:1603.08575_ (2016). [link](http://arxiv.org/pdf/1603.08575.pdf)~~
 
 - Makhzani, Alireza, et al. "Adversarial autoencoders." _arXiv preprint arXiv:1511.05644_ (2015). [link](http://arxiv.org/pdf/1511.05644)
 
@@ -111,7 +125,7 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Gatys, Leon A., Alexander S. Ecker, and Matthias Bethge. "A neural algorithm of artistic style." _arXiv preprint arXiv:1508.06576_ (2015). [link](http://arxiv.org/pdf/1508.06576)
 
 ## State Space Models
-- Gao, Yuanjun, et al. "Linear dynamical neural population models through nonlinear embeddings." _arXiv preprint arXiv:1605.08454_ (2016). [link](http://arxiv.org/pdf/1605.08454)
+- ~~Gao, Yuanjun, et al. "Linear dynamical neural population models through nonlinear embeddings." _arXiv preprint arXiv:1605.08454_ (2016). [link](http://arxiv.org/pdf/1605.08454)~~
 
 - Ross, Stéphane, Geoffrey J. Gordon, and Drew Bagnell. "A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning." _AISTATS_ (2011). [link](http://www.jmlr.org/proceedings/papers/v15/ross11a/ross11a.pdf)
 
@@ -119,7 +133,7 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 
 - Sussillo, David, et al. "LFADS-Latent Factor Analysis via Dynamical Systems." _arXiv preprint arXiv:1608.06315_ (2016). [link](http://arxiv.org/pdf/1608.06315)
 
-- Krishnan, Rahul G., Uri Shalit, and David Sontag. "Deep Kalman Filters."_arXiv preprint arXiv:1511.05121_ (2015). [link](http://arxiv.org/pdf/1511.05121)
+- ~~Krishnan, Rahul G., Uri Shalit, and David Sontag. "Deep Kalman Filters."_arXiv preprint arXiv:1511.05121_ (2015). [link](http://arxiv.org/pdf/1511.05121)~~
 
 - Bastani, Vahid et al. “Incremental Nonlinear System Identification and Adaptive Particle Filtering Using Gaussian Process.” _arXiv preprint arXiv:1608.08362_ (2016) [link](https://arxiv.org/pdf/1608.08362v1)
 
@@ -130,9 +144,9 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Schein, Aaron et al, “Gamma Poisson Dynamical Systems.” To appear in NIPS, 2016.
 
 ## Density Estimation
-- Uria, Benigno, et al. "Neural Autoregressive Distribution Estimation." _arXiv preprint arXiv:1605.02226_ (2016). [link](http://arxiv.org/pdf/1605.02226)
+- ~~Uria, Benigno, et al. "Neural Autoregressive Distribution Estimation." _arXiv preprint arXiv:1605.02226_ (2016). [link](http://arxiv.org/pdf/1605.02226)~~
 
-- Germain, Mathieu, et al. "MADE: masked autoencoder for distribution estimation." International Conference on Machine Learning. 2015. [link](http://www.jmlr.org/proceedings/papers/v37/germain15.pdf)
+- ~~Germain, Mathieu, et al. "MADE: masked autoencoder for distribution estimation." International Conference on Machine Learning. 2015. [link](http://www.jmlr.org/proceedings/papers/v37/germain15.pdf)~~
 
 - Tabak, E. G., and Cristina V. Turner. "A family of nonparametric density estimation algorithms." Communications on Pure and Applied Mathematics (2013): 145-164. [link](http://www.fis.uncor.edu/~turner/Trabajos/RevisedTT-ultimaversionTabak-turner.pdf)
 
