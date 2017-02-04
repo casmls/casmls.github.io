@@ -10,14 +10,15 @@ This week we scrutinized, in a discussion led by Shizhe Chen, two recent papers:
 
 <!--more-->
 
+# Introduction
+
 In science, it often occurs that theories, theorems, results, etc. are discovered or established at nearly the same time at different places. I hypothesize that this "ideas are in the air" phenomenon is not magic; instead, I believe those ideas have an increased likelihood of being discovered because they are &mdash; somehow &mdash; the most natural extensions of the fields in which they are being developed.
 
 The striking similarities between the main idea of [1] and [2]; namely, the "Gumbel-Softmax trick for re-parameterizing categorical distributions" serves as an example of such simultaneous discovery in machine learning. Here, the underlying explanation for the coincidence is rather obvious: one of the most popular new techniques in variational inference and generative modeling; the so-called "re-parameterization trick," could not be applied to discrete-valued random variables, imposing a significant hurdle for the development of new results. Now, with the Gumbel-Softmax trick as an add-on, we can do re-parameterization for inference involving discrete latent variables.  This creates a new promise for new findings in areas where the primary objects are of discrete nature; e.g. text modeling. 
 
 Before stating the results we start by reviewing the re-parameterization trick and its uses.
-## The re-parameterization trick is a hot idea, but it fails on discrete data
 
-### The re-parameterization trick
+# The re-parameterization trick is a hot idea, but it fails on discrete data
 
 Let’s begin by stating the re-parameterization trick (made popular in [4]). Let’s first recall the Law of the Unconscious Statistician (LOTUS), a simple rule of calculus stating that one can compute the expectation of a measurable function  $$g$$ of a random variable $$\epsilon$$ by integrating $$g(\epsilon)$$ with respect to the distribution function of $$\epsilon$$, that is:
 
@@ -150,11 +151,11 @@ Finally, we (almost literally) cite the tradeoff commented in [2], which is stat
 
 > _For small temperatures the samples are close to one-hot but the variance of the gradients is large. For large temperatures, samples are smooth but the variance of the gradients is small._
 
-## Final remarks
+# Final remarks
 
 As stated at the beginning, these result have provided a good solution to a common hurdle in machine learning, opening new directions for future research: first (and more immediately), related to the application of this method for  the inference/generation of discrete objects. Indeed, [3] is already an example of a direct application of this techniques for the generation of text using GANS. A second sensible direction of research relates to the creation of new discrete reparameterizations based on relaxations, beyond the Gumbel distribution.
 
-### References
+# References
  
 [1] Chris J. Maddison, Andriy Mnih, and Yee Whye Teh. "The Concrete Distribution: a Continuous Relaxation of Discrete Random Variables." ICLR Submission, 2017.
 
