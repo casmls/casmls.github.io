@@ -21,9 +21,6 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Bouchard-Côté, Alexandre, Sebastian J. Vollmer, and Arnaud Doucet. "The Bouncy Particle Sampler: A Non-Reversible Rejection-Free Markov Chain Monte Carlo Method." _arXiv preprint arXiv:1510.02451_ (2015). [link](https://arxiv.org/abs/1510.02451)
 - Pakman, Ari, et al. "Stochastic Bouncy Particle Sampler." _arXiv preprint arXiv:1609.00770_ (2016). [link](http://arxiv.org/abs/1609.00770)
 - Giles, Mike, et al. "Multilevel Monte Carlo for Scalable Bayesian Computations." arXiv preprint arXiv:1609.06144 (2016). [link](https://arxiv.org/pdf/1609.06144)
-- Jang, Eric et al. "Categorical Reparameterization with Gumbel-softmax." (2016) [link](http://openreview.net/pdf?id=rkE3y85ee)
-- Maddison, Chris J et al. "The concrete distribution: a continuous relaxation of discrete random variables." (2016) [link](http://openreview.net/pdf?id=S1jE5L5gl)
-- Kusner, Matt J. and José Miguel Hernández-Lobato. "GANs for Sequences of Discrete Elements with the Gumbel-softmax Distribution." (2016) [link](https://arxiv.org/abs/1611.04051)
 - Lopez-Paz, David, and Maxime Oquab. "Revisiting Classifier Two-Sample Tests." arXiv preprint arXiv:1610.06545 (2016). [link](https://arxiv.org/pdf/1610.06545)
 - He, Niao, et al. "Fast and Simple Optimization for Poisson Likelihood Models." arXiv preprint arXiv:1608.01264 (2016). [link](https://arxiv.org/pdf/1608.01264)
 
@@ -113,3 +110,8 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Krishnan, Rahul G., Uri Shalit, and David Sontag. "Deep Kalman Filters."_arXiv preprint arXiv:1511.05121_ (2015). [link](http://arxiv.org/pdf/1511.05121)
 - Uria, Benigno, et al. "Neural Autoregressive Distribution Estimation." _arXiv preprint arXiv:1605.02226_ (2016). [link](http://arxiv.org/pdf/1605.02226)
 - Germain, Mathieu, et al. "MADE: masked autoencoder for distribution estimation." International Conference on Machine Learning. 2015. [link](http://www.jmlr.org/proceedings/papers/v37/germain15.pdf)
+- Jang, Eric et al. "Categorical Reparameterization with Gumbel-softmax." (2016) [link](http://openreview.net/pdf?id=rkE3y85ee)
+- Maddison, Chris J et al. "The concrete distribution: a continuous relaxation of discrete random variables." (2016) [link](http://openreview.net/pdf?id=S1jE5L5gl)
+- Kusner, Matt J. and José Miguel Hernández-Lobato. "GANs for Sequences of Discrete Elements with the Gumbel-softmax Distribution." (2016) [link](https://arxiv.org/abs/1611.04051)
+- Khan, Mohammad E., et al. "Kullback-Leibler proximal variational inference." _Advances in Neural Information Processing Systems_. 2015. [link](http://papers.nips.cc/paper/5895-kullback-leibler-proximal-variational-inference.pdf)
+- Khan, Mohammad E., et al. "Faster stochastic variational inference using Proximal-Gradient methods with general divergence functions." arXiv preprint arXiv:1511.00146 (2015). [link](https://arxiv.org/pdf/1511.00146.pdf)
