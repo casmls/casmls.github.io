@@ -36,7 +36,7 @@ However, by itself the above formula is not enough. Indeed, in our ML applicatio
 $$\nabla_\phi \mathbb{E}_{Z\sim p_\phi(Z)}(f(Z)) = \nabla_\phi \mathbb{E}_{\epsilon\sim p(\epsilon)}(f(g(\epsilon,\phi))) =  \mathbb{E}_{\epsilon\sim p(\epsilon)}(\nabla f(g(\epsilon,\phi))).$$
 
 
-The second equality of the above expression constitutes another feature of the re-parameterization trick: we have conveniently expressed $$z$$ so that expectations of functions of $$z$$ can be expressed as integrals w.r.t a density that does not depend on the parameter; therefore, we exchange the expectation and gradient or "differentiate under the integral sign." 
+The second equality of the above expression constitutes another feature of the re-parameterization trick: we have conveniently expressed $$z$$ so that expectations of functions of $$z$$ can be expressed as integrals w.r.t a density that does not depend on the parameter; therefore, we exchange the expectation and gradient or "differentiate under the integral sign”. 
 
 The final feature of the re-parametrization trick has to do with how to use the above gradient formula to construct good unbiased estimates of the gradient, a task that we will often involved with (see below). The above formula gives an immediate way to obtain an unbiased estimate of the above gradient via Monte Carlo:
 
@@ -74,13 +74,13 @@ Another case where we can profit from re-parameterization comes from adversarial
 
 As nicely stated in [5], if we assume that for some function $$G$$ and noise distribution $$z$$ we have $$x=G(\theta_g,z)=G(z)$$, then, we can cast the (intractable) problem of learning $$p_{\theta_g}(x)$$ as a minimax game where we simultaneously try to minimize with respect to generative model parameters $$\theta_g$$ and maximize with respect to the parameters $$\theta_d$$ of an ad-hoc discriminative network $$D$$ (e.g. a multi-layer perceptron). In other words, we do:
 
-$$ \min_G \max_D \mathbb{E}_{x\sim p_{data}(x)}(\log(D(x))) - \mathbb{E}_{z\sim p(z)}(\log(1-D(G(z))). $$
+$$ \min_G \max_D\;\; \mathbb{E}_{x\sim p_{data}(x)}(\log(D(x))) - \mathbb{E}_{z\sim p(z)}(\log(1-D(G(z))). $$
 
 Adversarial learning algorithms iteratively sample batches from the data and noise distributions and use the noisy gradient information to simultaneously ascend in the parameters of $$D$$  (i.e,  $$\theta_d$$) while descending in the parameters of $$G$$  (i.e,  $$\theta_g$$).
 
 Notice that if we were not able re-parameterize, we could only express the above as
 
-$$ \min_{\theta_g} \max_D \mathbb{E}_{x\sim p_{data}(x)}(\log(D(x))) - \mathbb{E}_{x\sim p_{\theta_g}(x)}(\log(1-D(x)). $$
+$$ \min_{\theta_g} \max_D \;\;\mathbb{E}_{x\sim p_{data}(x)}(\log(D(x))) - \mathbb{E}_{x\sim p_{\theta_g}(x)}(\log(1-D(x)). $$
 
 Therefore, alternative unbiased estimates of the gradients of the second term (w.r.t  $$\theta_g$$) would be required if stochastic optimization was attempted. 
 
@@ -89,7 +89,7 @@ One alternative (which also applies to the variational setup) is to use the scor
 
 ### Why things can go wrong in discrete cases
 
-The reason why we cannot apply the re-parameterization trick to discrete variables is simple: by elementary real analysis facts, it is mathematically imposible for a non-degenerate function that maps a continuous set onto a discrete set to be differentiable (not even continuous!). That is, for the functional relation $$ z=g(\phi,\epsilon),$$ it does not make any sense to conceive $$\frac{\partial z}{\partial \phi}$$ in the discrete case, regardless of the value of $$\epsilon$$. Alternatively, in deep learning jargon: "we cannot backpropagate the gradients through discrete nodes in the computational graph."
+The reason why we cannot apply the re-parameterization trick to discrete variables is simple: by elementary real analysis facts, it is mathematically imposible for a non-degenerate function that maps a continuous set onto a discrete set to be differentiable (not even continuous!). That is, for the functional relation $$ z=g(\phi,\epsilon),$$ it does not make any sense to conceive $$\frac{\partial z}{\partial \phi}$$ in the discrete case, regardless of the value of $$\epsilon$$. Alternatively, in deep learning jargon: "we cannot backpropagate the gradients through discrete nodes in the computational graph”.
 
 As stated above, in both cases (variational inference and adversarial generative modeling) we still will be able to construct alternative estimates of the gradients. However, they may not (and do not!) enjoy the low-variance property of the re-parameterization-based ones. 
 
