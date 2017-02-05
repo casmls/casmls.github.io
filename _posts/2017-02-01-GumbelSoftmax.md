@@ -6,7 +6,7 @@ author: Gonzalo Mena
 excerpt_separator: <!--more-->
 comments: true
 ---
-This week we scrutinized, in a discussion led by Shizhe Chen, two recent papers: "The Concrete Distribution: a Continuous Relaxation of Discrete Random Variables"  by Chris Maddison and colleagues [1], and "Categorical Reparameterization by Gumbel-Softmax" by Eric Jang and collaborators [2]. Additionally, we considered a third paper: "GANS for Sequences of Discrete Elements with the Gumbel-Softmax Distribution" by Kusner and Hernández-Lobato [3]. This notes refer mainly to [1] and [2], which are currently under review for ICLR 2017. We also briefly address [3] at the end, which was presented in the recent "Adversarial Training" workshop at NIPS 2016.
+This week we scrutinized, in a discussion led by Shizhe Chen, two recent papers: "The Concrete Distribution: a Continuous Relaxation of Discrete Random Variables"  by Chris Maddison and colleagues [1], and "Categorical Reparameterization by Gumbel-Softmax" by Eric Jang and collaborators [2]. Additionally, we considered a third paper: "GANS for Sequences of Discrete Elements with the Gumbel-Softmax Distribution" by Kusner and Hernández-Lobato [3]. These notes refer mainly to [1] and [2], which are currently under review for ICLR 2017. We also briefly address [3] at the end, which was presented in the recent "Adversarial Training" workshop at NIPS 2016.
 
 <!--more-->
 
@@ -58,11 +58,11 @@ First, consider variational inference in a latent variable model: we want to hav
 
 $$ \mathcal{L}_{\theta,\phi}(x) = \mathbb{E}_{z\sim q_\phi(z \mid x)}\left(\log(p_\theta(x,z)) - \log(q_\phi(z \mid x))\right).$$
 
-Learning will be performed, then, by a double maximization of this surrogate function (the ELBO): with respect to $$\theta$$ in order to bridge the gap with the true posterior, and with respect to $$\phi$$, to maximize the evidence. 
+Learning will be performed, then, by a double maximization of this surrogate function (the ELBO): with respect to $$\phi$$ in order to bridge the gap with the true posterior, and with respect to $$\theta$$, to maximize the evidence. 
 
 The most direct approach for learning is to do gradient descent. However, unfortunately, gradients won’t be available in closed form because they are applied to the often intractable expectation with respect to $$z\sim q_\phi(z \mid x)$$. The standard, then, is to use gradient-based stochastic optimization, a family of methods that solve the above problem by assuming that noisy but unbiased estimators of the gradient are available: in that case, we can replace the true gradients by the noisy ones as long as we adapt the learning rate of our algorithms accordingly. 
 
-Whenever we can  re-parameterize $$q_\phi(z \mid x)$$ with respect to a noise distribution, $$s(\epsilon)$$, we will be able to construct good unbiased the ELBO (essential for fast convergence of stochastic optimization methods), as we will have: 
+Whenever we can  re-parameterize $$q_\phi(z \mid x)$$ with respect to a noise distribution, $$s(\epsilon)$$, we will be able to construct a good unbiased  estimator of the ELBO (essential for fast convergence of stochastic optimization methods) based on Monte Carlo samples, as we’ll have: 
 
  $$ \mathcal{L}_{\theta,\phi}(x)= \mathbb{E}_{\epsilon \sim s(\epsilon)} (\log (p_{\theta}(x,g(\phi,\epsilon)))-\log (q_\phi(g(\phi, \epsilon)))).$$
 
