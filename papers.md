@@ -59,6 +59,7 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Gatys, Leon A., Alexander S. Ecker, and Matthias Bethge. "A neural algorithm of artistic style." _arXiv preprint arXiv:1508.06576_ (2015). [link](http://arxiv.org/pdf/1508.06576)
 - Alain, Guillaume, and Yoshua Bengio. "Understanding intermediate layers using linear classifier probes." arXiv preprint arXiv:1610.01644 (2016). [link](https://arxiv.org/pdf/1610.01644)
 - Chen, Yutian, et al. "Learning to Learn for Global Optimization of Black Box Functions." arXiv preprint arXiv:1611.03824 (2016). [link](https://arxiv.org/pdf/1611.03824)
+- Rezende, Danilo Jimenez, Shakir Mohamed, and Daan Wierstra. "Stochastic Backpropagation and Approximate Inference in Deep Generative Models." Proceedings of The 31st International Conference on Machine Learning. 2014. [link](http://www.jmlr.org/proceedings/papers/v32/rezende14.html)
 
 ## State Space Models
 - Foerster, Jakob N., et al. "Intelligible language modeling with input switched affine networks." arXiv preprint arXiv:1611.09434 (2016). [link](https://arxiv.org/pdf/1611.09434)
