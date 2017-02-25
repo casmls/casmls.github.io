@@ -14,7 +14,6 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Rhee, Chang-han, and Peter W. Glynn. "Unbiased estimation with square root convergence for SDE models." _Operations Research 63.5_ (2015): 1026-1043. [link](http://pubsonline.informs.org/doi/pdf/10.1287/opre.2015.1404)
 - Tripuraneni, Nilesh, et al. "Magnetic Hamiltonian Monte Carlo." _arXiv preprint arXiv:1607.02738_ (2016). [link](http://arxiv.org/pdf/1607.02738)
 - Grosse, Roger B., Siddharth Ancha, and Daniel M. Roy. "Measuring the reliability of MCMC inference with bidirectional Monte Carlo." _arXiv preprint arXiv:1606.02275_ (2016). [link](http://arxiv.org/pdf/1606.02275)
-- Lake, Brenden M., Ruslan Salakhutdinov, and Joshua B. Tenenbaum. "Human-level concept learning through probabilistic program induction." _Science 350.6266_ (2015): 1332-1338. [link](http://clm.utexas.edu/compjclub/wp-content/uploads/2016/02/lake2015.pdf)
 - Kucukelbir, Alp, et al. "Automatic Differentiation Variational Inference." _arXiv preprint arXiv:1603.00788_ (2016). [link](http://arxiv.org/pdf/1603.00788v1.pdf)
 - Duvenaud, David, Dougal Maclaurin, and Ryan P. Adams. "Early Stopping as Nonparametric Variational Inference." _AISTATS_ (2016). [link](http://www.jmlr.org/proceedings/papers/v51/duvenaud16.pdf)
 - Rudolph, Maja R., et al. "Exponential Family Embeddings." _arXiv preprint arXiv:1608.00778_ (2016). [link](http://arxiv.org/pdf/1608.00778)
@@ -25,7 +24,6 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - He, Niao, et al. "Fast and Simple Optimization for Poisson Likelihood Models." arXiv preprint arXiv:1608.01264 (2016). [link](https://arxiv.org/pdf/1608.01264)
 
 ## Theory
-- Kakade, Sham, et al. "Prediction with a Short Memory." arXiv preprint arXiv:1612.02526 (2016). [link](https://arxiv.org/pdf/1612.02526)
 - Hardt, Moritz, Tengyu Ma, and Benjamin Recht. "Gradient Descent Learns Linear Dynamical Systems." arXiv preprint arXiv:1609.05191 (2016). [link](https://arxiv.org/pdf/1609.05191)
 - Yang, Fanny, Sivaraman Balakrishnan, and Martin J. Wainwright. "Statistical and computational guarantees for the Baum-Welch algorithm."  _53rd Annual Allerton Conference on Communication, Control, and Computing._ IEEE (2015). [link](http://arxiv.org/pdf/1512.08269)
 - Chen, Yudong, and Martin J. Wainwright. "Fast low-rank estimation by projected gradient descent: General statistical and algorithmic guarantees."_arXiv preprint arXiv:1509.03025_ (2015). [link](http://arxiv.org/pdf/1509.03025)
@@ -42,7 +40,6 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Chung, Junyoung, et al. "A recurrent latent variable model for sequential data." Advances in neural information processing systems. 2015. [link](https://arxiv.org/pdf/1506.02216.pdf)
 - Burda, Yuri, Roger Grosse, and Ruslan Salakhutdinov. "Importance weighted autoencoders." _arXiv preprint arXiv:1509.00519_ (2015). [link](http://arxiv.org/pdf/1509.00519)
 - He, Kaiming, et al. "Deep residual learning for image recognition." _arXiv preprint arXiv:1512.03385_ (2015). [link](http://arxiv.org/pdf/1512.03385)
-- Rezende, Danilo Jimenez, et al. "One-Shot Generalization in Deep Generative Models." _arXiv preprint arXiv:1603.05106_ (2016). [link](http://arxiv.org/pdf/1603.05106)
 - Rezende, Danilo Jimenez, et al. "Unsupervised Learning of 3D Structure from Images." _arXiv preprint arXiv:1607.00662_ (2016).  [link](http://arxiv.org/pdf/1607.00662)
 - Bowman, Samuel R., et al. "Generating sentences from a continuous space."_arXiv preprint arXiv:1511.06349_ (2015).  [link](http://arxiv.org/pdf/1511.06349.pdf)
 - Dosovitskiy, Alexey, et al. "Learning to Generate Chairs, Tables and Cars with Convolutional Networks." (2016). [link](http://arxiv.org/abs/1411.5928)
@@ -116,3 +113,6 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Kusner, Matt J. and José Miguel Hernández-Lobato. "GANs for Sequences of Discrete Elements with the Gumbel-softmax Distribution." (2016) [link](https://arxiv.org/abs/1611.04051)
 - Khan, Mohammad E., et al. "Kullback-Leibler proximal variational inference." _Advances in Neural Information Processing Systems_. 2015. [link](http://papers.nips.cc/paper/5895-kullback-leibler-proximal-variational-inference.pdf)
 - Khan, Mohammad E., et al. "Faster stochastic variational inference using Proximal-Gradient methods with general divergence functions." arXiv preprint arXiv:1511.00146 (2015). [link](https://arxiv.org/pdf/1511.00146.pdf)
+- Rezende, Danilo Jimenez, et al. "One-Shot Generalization in Deep Generative Models." _arXiv preprint arXiv:1603.05106_ (2016). [link](http://arxiv.org/pdf/1603.05106)
+- Lake, Brenden M., Ruslan Salakhutdinov, and Joshua B. Tenenbaum. "Human-level concept learning through probabilistic program induction." _Science 350.6266_ (2015): 1332-1338. [link](http://clm.utexas.edu/compjclub/wp-content/uploads/2016/02/lake2015.pdf)
+- Kakade, Sham, et al. "Prediction with a Short Memory." arXiv preprint arXiv:1612.02526 (2016). [link](https://arxiv.org/pdf/1612.02526)

@@ -1,8 +1,8 @@
 ---
 time: 2-4pm
 location: Jerome Greene Science Building - 3rd Floor Conf. Room
-presenter: Christian
-scribe: Jalaj
+presenter: Christian Naesseth
+scribe: Jalaj Bhandari
 ---
 
 TBD
