@@ -23,6 +23,7 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Giles, Mike, et al. "Multilevel Monte Carlo for Scalable Bayesian Computations." arXiv preprint arXiv:1609.06144 (2016). [link](https://arxiv.org/pdf/1609.06144)
 - Lopez-Paz, David, and Maxime Oquab. "Revisiting Classifier Two-Sample Tests." arXiv preprint arXiv:1610.06545 (2016). [link](https://arxiv.org/pdf/1610.06545)
 - He, Niao, et al. "Fast and Simple Optimization for Poisson Likelihood Models." arXiv preprint arXiv:1608.01264 (2016). [link](https://arxiv.org/pdf/1608.01264)
+- Lu, Xiaoyu, et al. "Relativistic Monte Carlo." arXiv preprint arXiv:1609.04388 (2016). [link](https://arxiv.org/pdf/1609.04388)
 
 ## Theory
 - Kakade, Sham, et al. "Prediction with a Short Memory." arXiv preprint arXiv:1612.02526 (2016). [link](https://arxiv.org/pdf/1612.02526)
