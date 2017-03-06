@@ -7,8 +7,10 @@ excerpt_separator: <!--more-->
 comments: true
 ---
 
-This week Robin led our discussion of two papers - "Value Iteration Networks" by Tamar et al. that won Best Paper at ICML 2016 and "Unsupervised learning for physical interaction through video prediction". The former introduces a novel connection between convolutional architectures and the value iteration algorithm of reinforcement learning, and presents a model that generalizes better to new tasks. The latter introduces a number of architectures for video prediction. A common theme in both papers is the exploitation of local structure in the problem in order to simplify the resulting calculations.
+This week Robin led our discussion of two papers - "Value Iteration Networks" by Tamar et al., which won Best Paper at NIPS 2016, and "Unsupervised learning for physical interaction through video prediction" by Finn et al, also from NIPS 2016. The former introduces a novel connection between convolutional architectures and the value iteration algorithm of reinforcement learning, and presents a model that generalizes better to new tasks. The latter introduces a number of architectures for video prediction. A common theme in both papers is the exploitation of local structure in the problem in order to simplify the resulting calculations.
 <!--more-->
+
+_The figures and tables below are copied from the aforementioned papers._
 
 Value Iteration Networks
 ========================
@@ -25,22 +27,22 @@ There are also alternative frameworks where instead of using discounted rewards 
 
 $$Q_{n}(s,a)=R(s,a)+\gamma\sum_{s'}P(s'|s,a)V_{n}(s')$$
 
-$$V_{n+1}=max_aQ_{n}(s,a)$$
+$$V_{n+1}=\mathrm{max}_a \; Q_{n}(s,a)$$
 
-This process is known to converge to the optimal value $$V$$* (and a corresponding $$Q$$\*). The optimal policy is then given by $$\pi$$\*$$(s)=argmax_{a}Q$$\*$$(s,a)$$.
+This process is known to converge to the optimal value $$V$$* (and a corresponding $$Q$$\*). The optimal policy is then given by $$\pi$$\*$$(s)=\mathrm{arg}\, \mathrm{max}_{a} \; Q$$\*$$(s,a)$$.
 
-An important generalization of the standard MDP is the partially observed MPD (POMDP) where instead of having access to the state, the agent receives only a noisy observation of the state $$\phi(s)$$. The deterministic policy discussed above is then replaced by a parametrized probability distribution over actions conditioned on these observations $$\pi_{\theta}(a $$\|$$ \phi(s))$$.
+An important generalization of the standard MDP is the partially observed MPD (POMDP) where instead of having access to the state, the agent receives only a noisy observation of the state $$\phi(s)$$. The deterministic policy discussed above is then replaced by a parameterized probability distribution over actions conditioned on these observations $$\pi_{\theta}(a $$\|$$ \phi(s))$$.
 
 The standard reference for reinforcement learning, where other extensions of this framework and algorithms to solve such problems are discussed, is Sutton & Barto [3].
 
 Reinforcement learning and neural networks
 ------------------------------------------
 
-The use of ideas and architectures developed for supervised learning in problems of reinforcement learning has been a common theme in recent years. Some of the most well known examples of this trend have been the works where neural networks were trained to play Atari games and go [4],[5]. These results are based on networks known as DQNs, which parametrize the policy and value functions of reinforcement learning using deep neural networks.
+The use of ideas and architectures developed for supervised learning in problems of reinforcement learning has been a common theme in recent years. Some of the most well known examples of this trend have been the works where neural networks were trained to play Atari games [4] and Go [5]. These results are based on networks known as DQNs, which parameterize the policy and value functions of reinforcement learning using deep neural networks.
 
-The innovation of the current work is the realization that a step of the value iteration algorithm is identical to the operation performed by a convolutional block in a convolutional neural network (CNN). The value function $$V_{n}(s')$$ takes the place of the input to the layer, while $$P(s'$$\|$$s,a)$$ form the weights of \|$$A$$ \| convolution channels. In many tasks of interest such as grid world navigation, $$P(s' $$\|$$s,a)$$ reflects the locality of the problem since transitions are only possible to nearby states. This is analogous to the locality of convolutional kernels in standard CNNs which is useful due to the hierarchical structure in natural images.
+The innovation of the current work is the realization that a step of the value iteration algorithm is identical to the operation performed by a convolutional block in a convolutional neural network (CNN). The value function $$V_{n}(s')$$ takes the place of the input to the layer, while $$P(s'$$\|$$s,a)$$ form the weights of \|$$A$$ \| convolution channels. In many tasks of interest such as grid world navigation, $$P(s' $$\|$$s,a)$$ reflects the locality of the problem since transitions are only possible to nearby states. This is analogous to the locality of convolutional kernels in standard CNNs, which is useful due to the hierarchical structure in natural images.
 
-Due to this connection, value iteration can be performed by a differential VI block that is composed of recursively connecting $$K$$ such convolutional blocks. One must then choose $$K$$ in such a way as to ensure convergence while not incurring a high computational cost by setting it to be too large. Due to the differential nature of the block the entire resulting network can then be trained using standard backpropagation. It is shown empirically that such value iteration networks "learn to plan" and can thus generalize from one task to another better than other existing architectures.
+Due to this connection, value iteration can be performed by a differentiable VI block that is composed of recursively connecting $$K$$ such convolutional blocks. One must then choose $$K$$ in such a way as to ensure convergence while not incurring a high computational cost by setting it to be too large. Due to the differentiable nature of the block, the entire resulting network can then be trained using standard backpropagation. It is shown empirically that such value iteration networks "learn to plan" and can thus generalize from one task to another better than other existing architectures.
 
 The architecture is illustrated in the following figure:
 ![ABC]({{site.base_url}}/img/VIM.png)
@@ -49,7 +51,7 @@ The architecture is illustrated in the following figure:
 Experiments
 -----------
 
-Imitation learning is a supervised learning problem where the optimal policy for a novel task is learned through a set of observations of optimal actions and states in related tasks. The tasks could be grid world navigation in different landscapes that are generated from the same distribution. In such experiments the VIN architecture generalizes better than other convolutional architectures that are more similar to those in the works (ref). Other experiments include a discretized versions of problems with continuous state spaces where the above formalism cannot be directly applied, as well as a web navigation task that generalizes the 2D state space of the previous experiments. In all the experiments the VIN outperformed competing architectures.
+Imitation learning is a supervised learning problem where the optimal policy for a novel task is learned through a set of observations of optimal actions and states in related tasks. The tasks could be grid world navigation in different landscapes that are generated from the same distribution. In such experiments the VIN architecture generalizes better than other convolutional architectures that are more similar to those in the works. Other experiments include a discretized versions of problems with continuous state spaces where the above formalism cannot be directly applied, as well as a web navigation task that generalizes the 2D state space of the previous experiments. In all the experiments the VIN outperformed competing architectures.
 
 The results for the grid world experiment are shown below. Note the higher success rate of the Value Iteration Network compared to architectures based on convolutional networks without the VI module. The performance gap is bigger for larger grids. The trajectory difference is a measure of the difference between the trajectory predicted by the network and the optimal shortest path to the goal.
 ![ABC]({{site.base_url}}/img/VIN-result.png)
@@ -58,7 +60,7 @@ Discussion
 -----------
 
 One point that arose in the discussion is the choice of the number of iterations $$K$$. While this was chosen to scale with the grid size for the grid world examples it is unclear if there is a general way to choose this parameter for novel tasks.
-Another interesting possible extension of the work that was discussed is the use of different operations instead of max pooling in the VI module. The use of softmax for instance would lead to the output of a single iteration being a distribution of values for different actions instead of a single $$V_n(s)$$. In order to prevent an exponential growth in the size of the network one could only consider the likeliest values as in beam search.
+Another interesting possible extension of the work that was discussed is the use of different operations instead of max pooling in the VI module. The use of softmax, for instance, would lead to the output of a single iteration being a distribution of values for different actions instead of a single $$V_n(s)$$. In order to prevent an exponential growth in the size of the network one could only consider the likeliest values as in beam search.
 
 Unsupervised Learning for Physical Interaction through Video Prediction
 =======================================================================
@@ -84,7 +86,7 @@ The CDNA architecture is illustrated below:
 ![ABC]({{site.base_url}}/img/CDNA.png)
 
 
-A third architecture, Spatial Transformer Predictions, replaces the masks $$\hat{m}^{i}$$ with a set of affine transformations $$\hat{M}^{i}$$ as in a Spatial Transformer Network (ref). These are then combined with a bilinear kernel to give a set of predictions $$\hat{J}_{t}^{i}(x,y)$$ as follows:
+A third architecture, Spatial Transformer Predictions, replaces the masks $$\hat{m}^{i}$$ with a set of affine transformations $$\hat{M}^{i}$$ as in a Spatial Transformer Network. These are then combined with a bilinear kernel to give a set of predictions $$\hat{J}_{t}^{i}(x,y)$$ as follows:
 
 $$\left(\begin{array}{c}
 x_{t-1}^{s}\\
@@ -95,7 +97,8 @@ y_{t-1}\\
 1
 \end{array}\right)$$
 
-$$\hat{J}_{t}^{i}(x,y)=\sum_{k,l\in(H,W)}\hat{I}_{t-1}(x-k,y-l)max(0,1-\left|x_{t-1}^{s}-k\right|)max(0,1-\left|y_{t-1}^{s}-l\right|)$$
+$$\hat{J}_{t}^{i}(x,y)=
+\sum_{k,l\in(H,W)}\hat{I}_{t-1}(x-k,y-l) \; \mathrm{max}(0,1-\left|x_{t-1}^{s}-k\right|) \; \mathrm{max}(0,1-\left|y_{t-1}^{s}-l\right|)$$
 
 and the predictions from the different channels are then combined with a mask as in the case of the CDNA.
 
