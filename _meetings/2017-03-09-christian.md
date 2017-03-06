@@ -2,7 +2,9 @@
 time: 2-4pm
 location: Jerome Greene Science Building - 3rd Floor Conf. Room
 presenter: Christian Naesseth
-scribe: Jalaj Bhandari
+scribe: Johannes Friedrich
 ---
 
-TBD
+Y. Ma, T. Chen, and E.B. Fox, "A Complete Recipe for Stochastic Gradient MCMC," _Neural Information Processing Systems (NIPS)_ (2015). [link](http://papers.nips.cc/paper/5891-a-complete-recipe-for-stochastic-gradient-mcmc)
+
+Lu, Xiaoyu, et al. "Relativistic Monte Carlo." arXiv preprint arXiv:1609.04388 (2016). [link](https://arxiv.org/pdf/1609.04388)
