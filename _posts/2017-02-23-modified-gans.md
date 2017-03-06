@@ -13,7 +13,7 @@ In this week's session we read and discussed two papers relating to GANs: Wasser
 
 _The figures and tables below are copied from the aforementioned papers._
 
-# Review of GANs
+## Review of GANs
 GANs were introduced by Goodfellow et al. in 2014 [2] as an alternative to the maximum likelihood approach to generative models. In a maximum likelihood framework, we define a distribution $$x_i \sim p_\theta$$ over our data $$\{x_i\}_{i=1}^n$$ and choose parameters $$\theta$$ such that the likelihood of the training data is maximized: $$\theta^*={\text{argmax}_{\theta}} \prod_{i=1}^n p_\theta(x_i)$$.
 
 In a GAN framework, the problem is formulated as a minimax game between a generator function G, and a discriminator function D. The classic analogy for this is that of a counterfeiter and a policeman. The policeman (D) tries to maximize his ability to distinguish between counterfeit products and real products, while the counterfeiter (G) simultaneously tries to produce material that is as close to the real deal as possible. 
