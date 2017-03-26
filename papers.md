@@ -74,7 +74,7 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 
 ## Density Estimation
 - Tabak, E. G., and Cristina V. Turner. "A family of nonparametric density estimation algorithms." Communications on Pure and Applied Mathematics (2013): 145-164. [link](http://www.fis.uncor.edu/~turner/Trabajos/RevisedTT-ultimaversionTabak-turner.pdf)
-- van den Oord, Aaron, Nal Kalchbrenner, and Koray Kavukcuoglu. "Pixel Recurrent Neural Networks." _arXiv preprint arXiv:1601.06759_ (2016). [link](http://arxiv.org/pdf/1601.06759)
+- van den Oord, Aaron, Nal Kalchbrenner, and Koray Kavukcuoglu. "Pixel Recurrent Neural Networks." Proceedings of The 33rd International Conference on Machine Learning. 2016. [link](http://arxiv.org/pdf/1601.06759)
 - Dinh, Laurent, Jascha Sohl-Dickstein, and Samy Bengio. "Density estimation using Real NVP." _arXiv preprint arXiv:1605.08803_ (2016). [link](http://arxiv.org/pdf/1605.08803)
 
 ## Reinforcement Learning
