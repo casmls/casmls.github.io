@@ -39,8 +39,7 @@ f(z) = -\left(D(z)+Q(z)\right) \nabla H(z) + \Gamma(z),
 \Gamma_i(z) = \sum_{j=1}^d \frac{\partial}{\partial z_j} \left(D_{ij}(z)+Q_{ij}(z)\right)
 $$
 
-Here, $$Q(z)$$ is a skew-symmetric curl matrix representing the deterministic traversing effects seen in HMC procedures.  In contrast, the diffusion matrix
-$$D(z)$$ determines the strength of the Wiener-process-driven diffusion. $$\epsilon$$-discretization yields a practical algorithm, which is basically preconditioned gradient decent with the right amount of additional noise injected at each step.
+Here, $$Q(z)$$ is a skew-symmetric curl matrix representing the deterministic traversing effects seen in HMC procedures.  In contrast, the diffusion matrix $$D(z)$$ determines the strength of the Wiener-process-driven diffusion. $$\epsilon$$-discretization yields a practical algorithm, which is basically preconditioned gradient decent with the right amount of additional noise injected at each step.
 
 The authors proof, that sampling  the  stochastic  dynamics  of  Eq. (1) with
 $$f(z)$$ as in Eq. (2) leads to the desired posterior distribution as the stationary
@@ -68,15 +67,33 @@ The authors only considered continuous Markov processes, hence their "complete" 
 Relativistic Monte Carlo
 ========================
 
+Background
+----------
+
 HMC is sensitive to large time discretizations and the mass matrix of HMC is hard to tune well. In order to alleviate these problems the authors of the second paper propose relativistic Hamiltonian Monte Carlo (RHMC), a version of HMC based on relativistic dynamics that introduce a maximum velocity on particles.
 
-They replace the Newtonian kinetic energy $$\frac{1}{2m}p^\top p$$ by $$m c^2\sqrt{\frac{p^\top p}{m^2c^2}+1}$$ as in special relativity. The "speed of light" $$c$$ controls the maximum speed and the "rest mass" $$m$$ the typical speed. 
-Proceeding analogously to standard Newtonian HMC (NHMC), the resulting dynamics are given by Hamilton's equations and simulated using leapfrog steps with step size $$\epsilon$$. While the momentum may become large with peaked gradients, the size of the parmeter update is bounded by $$\epsilon c$$. This also provides a recipe for choosing the parameters $$c$$, $$m$$ and $$\epsilon$$; first the discretization parameter $$epsilon$$ needs to be set, then we choose the maximal step $$\epsilon c$$ and in relation we choose the "cruising speed" by picking $$m$$. 
-The authors also develop relativistic variants of SGHMC and SGNHT making use of the framework presented in the first paper. Taking the zero-temperature limit of the relativistic SGHMC dynamics yields a relativistic stochastic gradient descent algorithm. The obtained updates are similar to RMSProp, Adagrad and Adam, with the main difference being that the relativistic mass adaptation uses the current momentum instead of being separately estimated using the square of the gradient.
+Relativistic MCMC
+-----------------
+
+They replace the Newtonian kinetic energy $$\frac{1}{2m}p^\top p$$, with "rest mass" $$m$$ and momentum $$p$$, by $$m c^2\sqrt{\frac{p^\top p}{m^2c^2}+1}$$ as in special relativity. The "speed of light" $$c$$ controls the maximum speed and $$m$$ the typical speed. 
+Proceeding analogously to standard Newtonian HMC (NHMC), the resulting dynamics are given by Hamilton's equations and simulated using leapfrog steps with step size $$\epsilon$$. While the momentum may become large with peaked gradients, the size of the parmeter update is $$\Delta\theta=\epsilon p \left(\frac{p^\top p}{c^2}+m^2\right)^{-1/2}$$ and thus bounded by $$\epsilon c$$. This also provides a recipe for choosing the parameters $$\epsilon$$, $$c$$ and $$m$$; first the discretization parameter $$epsilon$$ needs to be set, then we choose the maximal step $$\epsilon c$$ and in relation we choose the "cruising speed" by picking $$m$$. 
+The authors also develop relativistic variants of SGHMC and SGNHT making use of the framework presented in the first paper. Taking the zero-temperature limit of the relativistic SGHMC dynamics yields a relativistic stochastic gradient descent algorithm. The obtained updates are similar to RMSProp [8], Adagrad [9] and Adam [10], with the main difference being that the relativistic mass adaptation uses the current momentum instead of being separately estimated using the square of the gradient.
+
+Examples
+--------
 
 In the performed sampling experiments RHMC achieves similar or slightly better performance than NHMC and is strikingly more robust to the step size.
+The figure compares the performances of NHMC and RHMC for a wide range of stepsizes, via
+the effective sample sizes (ESS, higher better), the mean absolute error (MAE) between the true probabilities and the histograms of the sample frequencies (lower better), and the log Stein discrepancy (lower better). 
+
+![ABC]({{site.base_url}}/img/Recipe-fig2.png)
+
 The relativistic stochastic gradient descent algorithm is competitive with Adam on the standard MNIST dataset for deep networks and is able to achieve a lower error rate for an architecture with a single hidden layer.
 
+Discussion
+-----------
+
+Has Radford Neal really not thought or just not bothered about relativistic HMC? 
 
 
 ### References
@@ -100,3 +117,15 @@ The relativistic stochastic gradient descent algorithm is competitive with Adam 
 
 [7] N. Ding, Y. Fang, R. Babbush, C. Chen, R.D. Skeel, and H. Neven. Bayesian sampling using stochastic gradient thermostats.  In Advances in Neural Information Processing Systems 27, 2014.
 [link](http://papers.nips.cc/paper/5592-a-boosting-framework-on-grounds-of-online-learning.pdf)
+
+[8] T. Tieleman and G. Hinton. Lecture 6.5-RMSProp: Divide the gradient by a running average
+of its recent magnitude, 2012. COURSERA: Neural Networks for Machine Learning.
+[link](https://www.coursera.org/learn/neural-networks/lecture/YQHki/rmsprop-divide-the-gradient-by-a-running-average-of-its-recent-magnitude)
+
+[9] J. Duchi, E. Hazan, and Y. Singer. Adaptive Subgradient Methods for Online Learning and
+Stochastic Optimization. J Mach Learn Res, 12:2121–2159, 2011.
+[link](http://www.jmlr.org/papers/volume12/duchi11a/duchi11a.pdf)
+
+[10] D.P. Kingma and J. Ba. Adam: A method for stochastic optimization. In ICLR, 2015
+[link](https://arxiv.org/abs/1412.6980)
+
