@@ -20,8 +20,8 @@ A Complete Recipe for Stochastic Gradient MCMC
 Background
 ----------
 
-The standard MCMC goal is to generate samples $$\theta_i$$ from posterior distribution $$p(\theta|\cal{D})$$. 
-Recent efforts focus on designing continuous dynamics that leave $$p(z|\cal{D})$$ as the invariant distribution. The target posterior is translated to an energy landscape $$H(z)$$ that gradient-based dynamics explore: $$p(z|\cal{D})\propto \exp(-H(z))$$, where $$z=(\theta,r)$$ with auxiliary variables $$r$$, e.g. the momentum in HMC.
+The standard MCMC goal is to generate samples $$\theta_i$$ from posterior distribution $$p(\theta|\mathcal{D})$$. 
+Recent efforts focus on designing continuous dynamics that leave $$p(z|\mathcal{D})$$ as the invariant distribution. The target posterior is translated to an energy landscape $$H(z)$$ that gradient-based dynamics explore: $$p(z|\mathcal{D})\propto \exp(-H(z))$$, where $$z=(\theta,r)$$ with auxiliary variables $$r$$, e.g. the momentum in HMC.
 How does one define such continuous dynamics?
 
 Recipe
@@ -41,15 +41,15 @@ $$
 
 Here, $$Q(z)$$ is a skew-symmetric curl matrix representing the deterministic traversing effects seen in HMC procedures.  In contrast, the diffusion matrix $$D(z)$$ determines the strength of the Wiener-process-driven diffusion. $$\epsilon$$-discretization yields a practical algorithm, which is basically preconditioned gradient decent with the right amount of additional noise injected at each step.
 
-The authors proof, that sampling  the  stochastic  dynamics  of  Eq. (1) with
+The authors prove that sampling  the  stochastic  dynamics  of  Eq. (1) with
 $$f(z)$$ as in Eq. (2) leads to the desired posterior distribution as the stationary
-distribution. They further proof completeness, i.e. for any continuous Markov process with the desired stationary distribution $$p^s(z)$$, there exists an SDE as in Eq. (1) with $$f(z)$$ defined as in Eq. (2).
-For scalability to large data sets, computing gradient estimates on minibatches already introduces some amount of noise, which has to be estimated such that the additionaly injected noise can be appropriately reduced.
+distribution. They further prove completeness, i.e. for any continuous Markov process with the desired stationary distribution, $$p^s(z)$$, there exists an SDE as in Eq. (1) with $$f(z)$$ defined as in Eq. (2).
+For scalability to large data sets, computing gradient estimates on minibatches already introduces some amount of noise, which has to be estimated such that the additionally injected noise can be appropriately reduced.
 
 Examples
 --------
 
-The recipe can be used to "reinvent" previous MCMC algorithms, such as Hamiltonian Monte Carlo (HMC, [3]), stochastic gradient Hamiltonian Monte Carlo (SGHMC, [4]), stochastic gradient Langevin dynamics (SGLD, [5]), stochastic gradient Riemannian Langevin dynamics (SGRLD, [6]) and stochastic gradient Nose-Hoove thermostats (SGNHT, [7]). The corresponding choices of $$Q$$ and $$D$$ are listed in following table.
+The recipe can be used to "reinvent" previous MCMC algorithms, such as Hamiltonian Monte Carlo (HMC, [3]), stochastic gradient Hamiltonian Monte Carlo (SGHMC, [4]), stochastic gradient Langevin dynamics (SGLD, [5]), stochastic gradient Riemannian Langevin dynamics (SGRLD, [6]) and stochastic gradient Nose-Hoover thermostats (SGNHT, [7]). The corresponding choices of $$Q$$ and $$D$$ are listed in following table.
 
 ![ABC]({{site.base_url}}/img/Recipe-table.png)
 
@@ -76,7 +76,7 @@ Relativistic MCMC
 -----------------
 
 They replace the Newtonian kinetic energy $$\frac{1}{2m}p^\top p$$, with "rest mass" $$m$$ and momentum $$p$$, by $$m c^2\sqrt{\frac{p^\top p}{m^2c^2}+1}$$ as in special relativity. The "speed of light" $$c$$ controls the maximum speed and $$m$$ the typical speed. 
-Proceeding analogously to standard Newtonian HMC (NHMC), the resulting dynamics are given by Hamilton's equations and simulated using leapfrog steps with step size $$\epsilon$$. While the momentum may become large with peaked gradients, the size of the parmeter update is $$\Delta\theta=\epsilon p \left(\frac{p^\top p}{c^2}+m^2\right)^{-1/2}$$ and thus bounded by $$\epsilon c$$. This also provides a recipe for choosing the parameters $$\epsilon$$, $$c$$ and $$m$$; first the discretization parameter $$epsilon$$ needs to be set, then we choose the maximal step $$\epsilon c$$ and in relation we choose the "cruising speed" by picking $$m$$. 
+Proceeding analogously to standard Newtonian HMC (NHMC), the resulting dynamics are given by Hamilton's equations and simulated using leapfrog steps with step size $$\epsilon$$. While the momentum may become large with peaked gradients, the size of the parameter update is $$\Delta\theta=\epsilon p \left(\frac{p^\top p}{c^2}+m^2\right)^{-1/2}$$ and thus bounded by $$\epsilon c$$. This also provides a recipe for choosing the parameters $$\epsilon$$, $$c$$ and $$m$$; first the discretization parameter $$\epsilon$$ needs to be set, then we choose the maximal step $$\epsilon c$$ and in relation we choose the "cruising speed" by picking $$m$$. 
 The authors also develop relativistic variants of SGHMC and SGNHT making use of the framework presented in the first paper. Taking the zero-temperature limit of the relativistic SGHMC dynamics yields a relativistic stochastic gradient descent algorithm. The obtained updates are similar to RMSProp [8], Adagrad [9] and Adam [10], with the main difference being that the relativistic mass adaptation uses the current momentum instead of being separately estimated using the square of the gradient.
 
 Examples
