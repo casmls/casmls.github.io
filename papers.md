@@ -9,7 +9,6 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 ## Inference
 
 - Mnih, Andriy, and Danilo J. Rezende. "Variational inference for Monte Carlo objectives." _arXiv preprint arXiv:1602.06725_ (2016). [link](http://arxiv.org/pdf/1602.06725)
-- Y. Ma, T. Chen, and E.B. Fox, "A Complete Recipe for Stochastic Gradient MCMC," _Neural Information Processing Systems (NIPS)_ (2015). [link](http://arxiv.org/abs/1506.04696)
 - Kingma, Diederik P., and Max Welling. "Auto-encoding variational Bayes."_arXiv preprint arXiv:1312.6114_ (2013). [link](http://arxiv.org/pdf/1312.6114 )
 - Rhee, Chang-han, and Peter W. Glynn. "Unbiased estimation with square root convergence for SDE models." _Operations Research 63.5_ (2015): 1026-1043. [link](http://pubsonline.informs.org/doi/pdf/10.1287/opre.2015.1404)
 - Tripuraneni, Nilesh, et al. "Magnetic Hamiltonian Monte Carlo." _arXiv preprint arXiv:1607.02738_ (2016). [link](http://arxiv.org/pdf/1607.02738)
@@ -22,7 +21,6 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Giles, Mike, et al. "Multilevel Monte Carlo for Scalable Bayesian Computations." arXiv preprint arXiv:1609.06144 (2016). [link](https://arxiv.org/pdf/1609.06144)
 - Lopez-Paz, David, and Maxime Oquab. "Revisiting Classifier Two-Sample Tests." arXiv preprint arXiv:1610.06545 (2016). [link](https://arxiv.org/pdf/1610.06545)
 - He, Niao, et al. "Fast and Simple Optimization for Poisson Likelihood Models." arXiv preprint arXiv:1608.01264 (2016). [link](https://arxiv.org/pdf/1608.01264)
-- Lu, Xiaoyu, et al. "Relativistic Monte Carlo." arXiv preprint arXiv:1609.04388 (2016). [link](https://arxiv.org/pdf/1609.04388)
 
 ## Theory
 - Hardt, Moritz, Tengyu Ma, and Benjamin Recht. "Gradient Descent Learns Linear Dynamical Systems." arXiv preprint arXiv:1609.05191 (2016). [link](https://arxiv.org/pdf/1609.05191)
@@ -88,6 +86,8 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Gershman, Samuel J., Eric J. Horvitz, and Joshua B. Tenenbaum. "Computational rationality: A converging paradigm for intelligence in brains, minds, and machines." Science 349.6245 (2015): 273-278. [link](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.720.2764&rep=rep1&type=pdf)
 
 ## Previously Discussed in CAMLS
+- Lu, Xiaoyu, et al. "Relativistic Monte Carlo." arXiv preprint arXiv:1609.04388 (2016). [link](https://arxiv.org/pdf/1609.04388)
+- Y. Ma, T. Chen, and E.B. Fox, "A Complete Recipe for Stochastic Gradient MCMC," _Neural Information Processing Systems (NIPS)_ (2015). [link](http://arxiv.org/abs/1506.04696)
 - Rezende, Danilo Jimenez, and Shakir Mohamed. "Variational inference with normalizing flows." _arXiv preprint arXiv:1505.05770_ (2015). [link](http://arxiv.org/pdf/1505.05770)
 - Kingma, Diederik P., Tim Salimans, and Max Welling. "Improving Variational Inference with Inverse Autoregressive Flow." _arXiv preprint arXiv:1606.04934_ (2016). [link](https://arxiv.org/abs/1606.04934)
 - Moreno, Alexander, et al. "Automatic Variational ABC." _arXiv preprint arXiv:1606.08549_ (2016). [link](http://arxiv.org/pdf/1606.08549)
