@@ -10,6 +10,7 @@ comments: true
 This week Christian led our discussion of two papers relating to MCMC: "A Complete Recipe for Stochastic Gradient MCMC" (Ma et al. 2015) and "Relativistic Monte Carlo" (Lu et al. 2017). 
 The former provides a general recipe for constructing Markov Chain Monte Carlo (MCMC) samplers—including stochastic gradient versions—based on continuous Markov processes, thus unifying and generalizing earlier work.
 The latter presents a version of Hamiltonian Monte Carlo (HMC) based on relativistic dynamics that introduce a maximum velocity on particles. It is more stable and robust to the choice of parameters compared to the Newtonian counterpart and shows similarity to popular stochastic optimizers such as Adam and RMSProp.
+
 <!--more-->
 
 _The figures and tables below are copied from the aforementioned papers or posters._
