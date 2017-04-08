@@ -23,6 +23,7 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - He, Niao, et al. "Fast and Simple Optimization for Poisson Likelihood Models." arXiv preprint arXiv:1608.01264 (2016). [link](https://arxiv.org/pdf/1608.01264)
 
 ## Theory
+- Arora, Sanjeev, et al. "Generalization and Equilibrium in Generative Adversarial Nets (GANs)." arXiv preprint arXiv:1703.00573 (2017). [link](https://arxiv.org/pdf/1703.00573.pdf)
 - Hardt, Moritz, Tengyu Ma, and Benjamin Recht. "Gradient Descent Learns Linear Dynamical Systems." arXiv preprint arXiv:1609.05191 (2016). [link](https://arxiv.org/pdf/1609.05191)
 - Yang, Fanny, Sivaraman Balakrishnan, and Martin J. Wainwright. "Statistical and computational guarantees for the Baum-Welch algorithm."  _53rd Annual Allerton Conference on Communication, Control, and Computing._ IEEE (2015). [link](http://arxiv.org/pdf/1512.08269)
 - Chen, Yudong, and Martin J. Wainwright. "Fast low-rank estimation by projected gradient descent: General statistical and algorithmic guarantees."_arXiv preprint arXiv:1509.03025_ (2015). [link](http://arxiv.org/pdf/1509.03025)
@@ -33,6 +34,7 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Mohamed, Shakir, and Balaji Lakshminarayanan. "Learning in Implicit Generative Models." arXiv preprint arXiv:1610.03483 (2016). [link](https://arxiv.org/pdf/1610.03483)
 
 ## Deep Learning
+- Gulrajani, Ishaan, et al. "Improved Training of Wasserstein GANs." arXiv preprint arXiv:1704.00028 (2017). [link](https://arxiv.org/pdf/1704.00028.pdf)
 - Metz, Luke, et al. "Unrolled Generative Adversarial Networks." arXiv preprint arXiv:1611.02163 (2016). [link](https://arxiv.org/pdf/1611.02163)
 - Radford, Alec, Luke Metz, and Soumith Chintala. "Unsupervised representation learning with deep convolutional generative adversarial networks." arXiv preprint arXiv:1511.06434 (2015). [link](http://arxiv.org/pdf/1511.06434)
 - Graves, Alex, et al. "Hybrid computing using a neural network with dynamic external memory." Nature 538.7626 (2016): 471-476. [link](http://www.nature.com/nature/journal/v538/n7626/full/nature20101.html)
