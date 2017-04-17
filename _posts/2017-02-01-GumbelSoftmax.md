@@ -113,7 +113,7 @@ In other words, a recipe for sampling from a categorial distribution is: 1) draw
 
 Unfortunately, the $$ \arg\max $$ operation that relates the Gumbel samples, the $$\alpha_k$$’s and the realizations of the discrete distribution is not continuous. One way of circumvent this, as suggested in [1] and [2] is to relax the discrete set by considering random variables taking values in a larger set. To construct this relaxation we start by recognizing that 1) any discrete random variable can always be expressed as a *one-hot* vector (i.e, a vector filled zeros except for an index where the coordinate is one), by mapping the realization of the variable to the index of the non-zero entry of the vector, and 2) that the convex hull of the set of one-hot vector is the probability simplex:
 
-$$\Delta^{K-1}=\{x\in R_{+}^K\quad, \sum_{k=1}^K x_k \leq 1\}.$$
+$$\Delta^{K-1}=\left\{x\in R_{+}^K, \; \sum_{k=1}^K x_k = 1 \right\}.$$
 
 Therefore, a natural way to extend (or ‘relax’) a discrete random variables is by allowing it to take values in the probability simplex. Both [1] and [2] propose to consider the softmax map (indexed by a temperature parameter): 
 
