@@ -9,7 +9,6 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 ## Inference
 
 - Mnih, Andriy, and Danilo J. Rezende. "Variational inference for Monte Carlo objectives." _arXiv preprint arXiv:1602.06725_ (2016). [link](http://arxiv.org/pdf/1602.06725)
-- Y. Ma, T. Chen, and E.B. Fox, "A Complete Recipe for Stochastic Gradient MCMC," _Neural Information Processing Systems (NIPS)_ (2015). [link](http://arxiv.org/abs/1506.04696)
 - Kingma, Diederik P., and Max Welling. "Auto-encoding variational Bayes."_arXiv preprint arXiv:1312.6114_ (2013). [link](http://arxiv.org/pdf/1312.6114 )
 - Rhee, Chang-han, and Peter W. Glynn. "Unbiased estimation with square root convergence for SDE models." _Operations Research 63.5_ (2015): 1026-1043. [link](http://pubsonline.informs.org/doi/pdf/10.1287/opre.2015.1404)
 - Tripuraneni, Nilesh, et al. "Magnetic Hamiltonian Monte Carlo." _arXiv preprint arXiv:1607.02738_ (2016). [link](http://arxiv.org/pdf/1607.02738)
@@ -22,9 +21,9 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Giles, Mike, et al. "Multilevel Monte Carlo for Scalable Bayesian Computations." arXiv preprint arXiv:1609.06144 (2016). [link](https://arxiv.org/pdf/1609.06144)
 - Lopez-Paz, David, and Maxime Oquab. "Revisiting Classifier Two-Sample Tests." arXiv preprint arXiv:1610.06545 (2016). [link](https://arxiv.org/pdf/1610.06545)
 - He, Niao, et al. "Fast and Simple Optimization for Poisson Likelihood Models." arXiv preprint arXiv:1608.01264 (2016). [link](https://arxiv.org/pdf/1608.01264)
-- Lu, Xiaoyu, et al. "Relativistic Monte Carlo." arXiv preprint arXiv:1609.04388 (2016). [link](https://arxiv.org/pdf/1609.04388)
 
 ## Theory
+- Arora, Sanjeev, et al. "Generalization and Equilibrium in Generative Adversarial Nets (GANs)." arXiv preprint arXiv:1703.00573 (2017). [link](https://arxiv.org/pdf/1703.00573.pdf)
 - Hardt, Moritz, Tengyu Ma, and Benjamin Recht. "Gradient Descent Learns Linear Dynamical Systems." arXiv preprint arXiv:1609.05191 (2016). [link](https://arxiv.org/pdf/1609.05191)
 - Yang, Fanny, Sivaraman Balakrishnan, and Martin J. Wainwright. "Statistical and computational guarantees for the Baum-Welch algorithm."  _53rd Annual Allerton Conference on Communication, Control, and Computing._ IEEE (2015). [link](http://arxiv.org/pdf/1512.08269)
 - Chen, Yudong, and Martin J. Wainwright. "Fast low-rank estimation by projected gradient descent: General statistical and algorithmic guarantees."_arXiv preprint arXiv:1509.03025_ (2015). [link](http://arxiv.org/pdf/1509.03025)
@@ -35,6 +34,7 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Mohamed, Shakir, and Balaji Lakshminarayanan. "Learning in Implicit Generative Models." arXiv preprint arXiv:1610.03483 (2016). [link](https://arxiv.org/pdf/1610.03483)
 
 ## Deep Learning
+- Gulrajani, Ishaan, et al. "Improved Training of Wasserstein GANs." arXiv preprint arXiv:1704.00028 (2017). [link](https://arxiv.org/pdf/1704.00028.pdf)
 - Metz, Luke, et al. "Unrolled Generative Adversarial Networks." arXiv preprint arXiv:1611.02163 (2016). [link](https://arxiv.org/pdf/1611.02163)
 - Radford, Alec, Luke Metz, and Soumith Chintala. "Unsupervised representation learning with deep convolutional generative adversarial networks." arXiv preprint arXiv:1511.06434 (2015). [link](http://arxiv.org/pdf/1511.06434)
 - Graves, Alex, et al. "Hybrid computing using a neural network with dynamic external memory." Nature 538.7626 (2016): 471-476. [link](http://www.nature.com/nature/journal/v538/n7626/full/nature20101.html)
@@ -74,7 +74,7 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 
 ## Density Estimation
 - Tabak, E. G., and Cristina V. Turner. "A family of nonparametric density estimation algorithms." Communications on Pure and Applied Mathematics (2013): 145-164. [link](http://www.fis.uncor.edu/~turner/Trabajos/RevisedTT-ultimaversionTabak-turner.pdf)
-- van den Oord, Aaron, Nal Kalchbrenner, and Koray Kavukcuoglu. "Pixel Recurrent Neural Networks." _arXiv preprint arXiv:1601.06759_ (2016). [link](http://arxiv.org/pdf/1601.06759)
+- van den Oord, Aaron, Nal Kalchbrenner, and Koray Kavukcuoglu. "Pixel Recurrent Neural Networks." Proceedings of The 33rd International Conference on Machine Learning. 2016. [link](http://arxiv.org/pdf/1601.06759)
 - Dinh, Laurent, Jascha Sohl-Dickstein, and Samy Bengio. "Density estimation using Real NVP." _arXiv preprint arXiv:1605.08803_ (2016). [link](http://arxiv.org/pdf/1605.08803)
 
 ## Reinforcement Learning
@@ -88,6 +88,8 @@ This is a list of suggested papers to choose from, loosely organized by topic.
 - Gershman, Samuel J., Eric J. Horvitz, and Joshua B. Tenenbaum. "Computational rationality: A converging paradigm for intelligence in brains, minds, and machines." Science 349.6245 (2015): 273-278. [link](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.720.2764&rep=rep1&type=pdf)
 
 ## Previously Discussed in CAMLS
+- Lu, Xiaoyu, et al. "Relativistic Monte Carlo." arXiv preprint arXiv:1609.04388 (2016). [link](https://arxiv.org/pdf/1609.04388)
+- Y. Ma, T. Chen, and E.B. Fox, "A Complete Recipe for Stochastic Gradient MCMC," _Neural Information Processing Systems (NIPS)_ (2015). [link](http://arxiv.org/abs/1506.04696)
 - Rezende, Danilo Jimenez, and Shakir Mohamed. "Variational inference with normalizing flows." _arXiv preprint arXiv:1505.05770_ (2015). [link](http://arxiv.org/pdf/1505.05770)
 - Kingma, Diederik P., Tim Salimans, and Max Welling. "Improving Variational Inference with Inverse Autoregressive Flow." _arXiv preprint arXiv:1606.04934_ (2016). [link](https://arxiv.org/abs/1606.04934)
 - Moreno, Alexander, et al. "Automatic Variational ABC." _arXiv preprint arXiv:1606.08549_ (2016). [link](http://arxiv.org/pdf/1606.08549)
