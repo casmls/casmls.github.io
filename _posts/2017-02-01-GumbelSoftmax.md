@@ -75,13 +75,13 @@ Another case where we can profit from re-parameterization comes from adversarial
 
 As nicely stated in [5], if we assume that for some function $$G$$ and noise distribution $$z$$ we have $$x=G(\theta_g,z)=G(z)$$, then, we can cast the (intractable) problem of learning $$p_{\theta_g}(x)$$ as a minimax game where we simultaneously try to minimize with respect to generative model parameters $$\theta_g$$ and maximize with respect to the parameters $$\theta_d$$ of an ad-hoc discriminative network $$D$$ (e.g. a multi-layer perceptron). In other words, we do:
 
-$$ \min_G \max_D\;\; \mathbb{E}_{x\sim p_{data}(x)}(\log(D(x))) - \mathbb{E}_{z\sim p(z)}(\log(1-D(G(z))). $$
+$$ \min_G \max_D\;\; \mathbb{E}_{x\sim p_{data}(x)}(\log(D(x))) + \mathbb{E}_{z\sim p(z)}(\log(1-D(G(z))). $$
 
 Adversarial learning algorithms iteratively sample batches from the data and noise distributions and use the noisy gradient information to simultaneously ascend in the parameters of $$D$$  (i.e,  $$\theta_d$$) while descending in the parameters of $$G$$  (i.e,  $$\theta_g$$).
 
 Notice that if we were not able re-parameterize, we could only express the above as
 
-$$ \min_{\theta_g} \max_D \;\;\mathbb{E}_{x\sim p_{data}(x)}(\log(D(x))) - \mathbb{E}_{x\sim p_{\theta_g}(x)}(\log(1-D(x)). $$
+$$ \min_{\theta_g} \max_D \;\;\mathbb{E}_{x\sim p_{data}(x)}(\log(D(x))) + \mathbb{E}_{x\sim p_{\theta_g}(x)}(\log(1-D(x)). $$
 
 Therefore, alternative unbiased estimates of the gradients of the second term (w.r.t  $$\theta_g$$) would be required if stochastic optimization was attempted. 
 
@@ -141,7 +141,7 @@ Now we will briefly comment what the above definitions entail, to better underst
 3.   Convex eventually:  if $$\tau\leq (n-1)^{-1}$$ then  $$ p_{\alpha,\tau}(x) $$ is a log-convex function of x.
 4.   For learning, there is a tradeoff between small and large temperatures.
 
-The rounding property is important to conceive actual discrete samples in this relaxed framework. The rounding property is a simple consequence of the fact that $$\exp(\cdot)$$ is an increasing function, and implies that even in this relaxed regime with non-zero temperature, we can still easily sample from our original discrete distribution by mapping points $$x$$ in the simplex to the one-hot vector (an extreme-point of the simplex) with the non-zero coordinate $$k$$ so that $$x_k$$ is the closest to one. This property is exploited in [2] to construct the ‘Straight-Through’ Gumbel Estimator, needed in cases where one does not want to destroy the discrete structure in the hidden model.
+The rounding property is important to conceive actual discrete samples in this relaxed framework. The rounding property is an extension of the rounding property for Gumbel variables, also referred to as the *Gumbel-Max trick* ([see this blog post](https://hips.seas.harvard.edu/blog/2013/04/06/the-gumbel-max-trick-for-discrete-distributions/) for a derivation). To extend the property from vanilla Gumbel variables one one has to notice that the map $$\rightarrow softmax(x/\tau)$$ preserves the ordering of the elements of $x$, that is, $$x_i\geq x_k$$ if and only if $softmax(x_i\tau)\geq \softmax(x_k/\tau)$$. The rounding property implies that even in this relaxed regime with non-zero temperature, we can still easily sample from our original discrete distribution by mapping points $$x$$ in the simplex to the one-hot vector (an extreme-point of the simplex) with the non-zero coordinate $$k$$ so that $$x_k$$ is the closest to one. This property is exploited in [2] to construct the ‘Straight-Through’ Gumbel Estimator, needed in cases where one does not want to destroy the discrete structure in the hidden model.
 
 The zero temperature property says things are well behaved in that in the zero-temperature limit we recover the original discrete distribution. One way to see this is to think in the logistic function modulated by a slope parameter. For high slope (low temperature) the logistic function will become the Heaviside function, taking only two values.
 
